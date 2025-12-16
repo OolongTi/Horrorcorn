@@ -251,6 +251,7 @@ namespace UnityEditor.PostProcessing
 
         #region UI & events
 
+        [Obsolete("Obsolete")]
         void OnCurveGUI(Rect rect, SerializedProperty curve, CurveState state)
         {
             // Discard invisible curves
@@ -494,6 +495,7 @@ namespace UnityEditor.PostProcessing
             SaveCurve(curve, animCurve);
         }
 
+        [Obsolete("Obsolete")]
         void OnGeneralUI(Rect rect)
         {
             var e = Event.current;
