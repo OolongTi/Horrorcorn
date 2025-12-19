@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
-        
+        PickupSensor.PickupCollected += PickedUp;
     }
     
     
@@ -78,5 +78,10 @@ public class PlayerController : MonoBehaviour
         movementVector.y = yVelocity;
         
         characterController.Move(movementVector * Time.deltaTime);
+    }
+
+    void PickedUp(Pickup pickup)
+    {
+        pickup.PickedUp();
     }
 }
