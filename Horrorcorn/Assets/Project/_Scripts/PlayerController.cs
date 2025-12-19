@@ -2,15 +2,20 @@ using System;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 10.0f;
     public Transform orientation;
 
-    [SerializeField] private float jumpSpeed = 8f;
+    [SerializeField] private float jumpSpeed = 10f;
     [SerializeField] private float gravity = -30f;
     private float yVelocity;
+    
+    [SerializeField] private Image StaminaBar;
+    [SerializeField] private float Stamina = 100f;
+    [SerializeField] private float MaxStamina = 100f;
     
     private CharacterController characterController;
 
@@ -52,11 +57,21 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 yVelocity = jumpSpeed;
+                jumpSpeed = 0;
+                Stamina = 0;
+                StaminaBar.fillAmount = Stamina / MaxStamina;
             }
         }
         else
         {
             yVelocity += gravity * Time.deltaTime;
+        }
+        
+        if (Stamina < MaxStamina)
+        {
+            Stamina += 0.1f;
+            StaminaBar.fillAmount = Stamina / MaxStamina;
+            jumpSpeed += 0.01f;
         }
         
         movementVector *= speed;
