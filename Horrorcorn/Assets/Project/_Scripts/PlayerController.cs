@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 5.0f;
     private bool isSprinting;
+    private bool isMoving;
     public Transform orientation;
 
     [SerializeField] private float jumpSpeed = 10f;
@@ -25,35 +23,6 @@ public class PlayerController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         PickupSensor.PickupCollected += PickedUp;
-    }
-
-    private void FixedUpdate()
-    {
-        if (Stamina < MaxStamina && isSprinting == false)
-        {
-            Stamina += 1f;
-            StaminaBar.fillAmount = Stamina / MaxStamina;
-            if (jumpSpeed <= 10f)
-            {
-                jumpSpeed += 0.1f;
-            } 
-        }
-        if (isSprinting)
-        {
-            Stamina -= 0.1f;
-            jumpSpeed -= 0.01f;
-            StaminaBar.fillAmount = Stamina / MaxStamina;
-        }
-        if (Stamina <= 0)
-        {
-            Stamina = 0;
-            jumpSpeed = 0;
-            staminaEmpty = true;
-        }
-        else
-        {
-            staminaEmpty = false;
-        }
     }
 
     void Update()
@@ -79,7 +48,7 @@ public class PlayerController : MonoBehaviour
             movementVector += orientation.right * -1;
         }
         movementVector.Normalize();
-
+        isMoving = movementVector.sqrMagnitude > 0;
 
         if (characterController.isGrounded)
         {
@@ -107,13 +76,42 @@ public class PlayerController : MonoBehaviour
             isSprinting = false;
         }
         
-        if (isSprinting && staminaEmpty == false) speed = 10f;
+        if (isSprinting && staminaEmpty == false || isSprinting && characterController.isGrounded == false) speed = 10f;
         else speed = 5f;
         
         movementVector *= speed;
         movementVector.y = yVelocity;
         
         characterController.Move(movementVector * Time.deltaTime);
+    }
+    
+    void FixedUpdate()
+    {
+        if (Stamina < MaxStamina && (!isSprinting || !isMoving))
+        {
+            Stamina += 1f;
+            StaminaBar.fillAmount = Stamina / MaxStamina;
+            if (jumpSpeed <= 10f)
+            {
+                jumpSpeed += 0.1f;
+            } 
+        }
+        if (isSprinting && isMoving)
+        {
+            Stamina -= 0.1f;
+            jumpSpeed -= 0.01f;
+            StaminaBar.fillAmount = Stamina / MaxStamina;
+        }
+        if (Stamina <= 0)
+        {
+            Stamina = 0;
+            jumpSpeed = 0;
+            staminaEmpty = true;
+        }
+        else
+        {
+            staminaEmpty = false;
+        }
     }
 
     void PickedUp(Pickup pickup)
