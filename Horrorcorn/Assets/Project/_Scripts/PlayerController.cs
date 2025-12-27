@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    private bool isSprinting;
     [SerializeField] private float speed = 5.0f;
+    private bool isSprinting;
     public Transform orientation;
 
     [SerializeField] private float jumpSpeed = 10f;
@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private float yVelocity;
     
     [SerializeField] private Image StaminaBar;
+    private bool staminaEmpty;
     [SerializeField] private float Stamina = 100f;
     [SerializeField] private float MaxStamina = 100f;
     
@@ -28,11 +29,30 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Stamina < MaxStamina)
+        if (Stamina < MaxStamina && isSprinting == false)
         {
             Stamina += 1f;
             StaminaBar.fillAmount = Stamina / MaxStamina;
-            jumpSpeed += 0.1f;
+            if (jumpSpeed <= 10f)
+            {
+                jumpSpeed += 0.1f;
+            } 
+        }
+        if (isSprinting)
+        {
+            Stamina -= 0.1f;
+            jumpSpeed -= 0.01f;
+            StaminaBar.fillAmount = Stamina / MaxStamina;
+        }
+        if (Stamina <= 0)
+        {
+            Stamina = 0;
+            jumpSpeed = 0;
+            staminaEmpty = true;
+        }
+        else
+        {
+            staminaEmpty = false;
         }
     }
 
@@ -86,7 +106,9 @@ public class PlayerController : MonoBehaviour
         {
             isSprinting = false;
         }
-        speed = isSprinting ? 10f : 5f;
+        
+        if (isSprinting && staminaEmpty == false) speed = 10f;
+        else speed = 5f;
         
         movementVector *= speed;
         movementVector.y = yVelocity;
