@@ -22,15 +22,16 @@ public class PlayerCamera : MonoBehaviour
         Cursor.visible = false;
     }
     
-    void LateUpdate()
+    void Update()
     {
+        if (Time.timeScale == 0) return;
         float mouseX = Input.GetAxisRaw("Mouse X") * sensitivityX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * sensitivityY;
         
         yRotation += mouseX;
         
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation = Mathf.Clamp(xRotation, -90f, 65f);
         
         
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);

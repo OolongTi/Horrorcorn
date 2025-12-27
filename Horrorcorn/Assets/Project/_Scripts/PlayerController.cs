@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed = 10.0f;
+    private bool isSprinting;
+    [SerializeField] private float speed = 5.0f;
     public Transform orientation;
 
     [SerializeField] private float jumpSpeed = 10f;
@@ -24,10 +25,20 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         PickupSensor.PickupCollected += PickedUp;
     }
-    
-    
+
+    private void FixedUpdate()
+    {
+        if (Stamina < MaxStamina)
+        {
+            Stamina += 1f;
+            StaminaBar.fillAmount = Stamina / MaxStamina;
+            jumpSpeed += 0.1f;
+        }
+    }
+
     void Update()
     {
+        if (Time.timeScale == 0) return;
         Vector3 movementVector = Vector3.zero;
 
         if (Input.GetKey(KeyCode.W))
@@ -66,13 +77,16 @@ public class PlayerController : MonoBehaviour
         {
             yVelocity += gravity * Time.deltaTime;
         }
-        
-        if (Stamina < MaxStamina)
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            Stamina += 0.1f;
-            StaminaBar.fillAmount = Stamina / MaxStamina;
-            jumpSpeed += 0.01f;
+            isSprinting = true;
         }
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            isSprinting = false;
+        }
+        speed = isSprinting ? 10f : 5f;
         
         movementVector *= speed;
         movementVector.y = yVelocity;

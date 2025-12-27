@@ -25,12 +25,10 @@ public class TimeManager
         if (pauseStack.IsSet)
         {
             Time.timeScale = 0f;
-            Debug.Log(Time.timeScale);
         }
         else
         {
             Time.timeScale = timeScale;
-            Debug.Log(Time.timeScale);
         }
     }
 }
