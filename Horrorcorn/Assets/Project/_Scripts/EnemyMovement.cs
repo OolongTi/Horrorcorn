@@ -13,9 +13,12 @@ public class EnemyMovement : MonoBehaviour
     public float updateInterval = 0.1f;
     private bool following = false;
     
+    private bool hasReachedDestination;
+    
     private NavMeshAgent agent;
     private Coroutine followCoroutine;
     
+    public static event Action DestinationReached;
 
     private void Awake()
     {
@@ -26,6 +29,27 @@ public class EnemyMovement : MonoBehaviour
     {
         EnemySightSensor.PlayerSighted += playerSighted;
         EnemyDistanceSensor.PlayerGone += playerGone;
+    }
+
+    private void OnDestroy()
+    {
+        EnemySightSensor.PlayerSighted -= playerSighted;
+        EnemyDistanceSensor.PlayerGone -= playerGone;
+    }
+
+    void Update()
+    {
+        float distance = Vector3.Distance(transform.position, agent.destination);
+
+        if (distance <= 1f && !hasReachedDestination)
+        {
+            hasReachedDestination = true;
+            DestinationReached?.Invoke();
+        }
+        else if (distance > 1.5f)
+        {
+            hasReachedDestination = false;
+        }
     }
 
     private void playerSighted()

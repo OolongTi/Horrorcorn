@@ -13,6 +13,11 @@ public class EnemySightSensor : MonoBehaviour
     {
         EnemySightTrigger.PlayerInTrigger += PlayerInRange;
     }
+    
+    private void OnDestroy()
+    {
+        EnemySightTrigger.PlayerInTrigger -= PlayerInRange;
+    }
 
     private void PlayerInRange()
     {
