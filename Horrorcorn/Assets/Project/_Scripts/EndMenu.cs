@@ -9,6 +9,7 @@ public class EndMenu : MonoBehaviour
     {
         gameObject.SetActive(false);
         Keys.WinEvent += EnableEndMenu;
+        EnemyKillScript.LooseEvent += EnableEndMenu;
     }
 
     private void EnableEndMenu()
