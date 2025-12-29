@@ -3,13 +3,18 @@ using UnityEngine;
 
 public class EnemyDistanceSensor : MonoBehaviour
 {
-    public static event Action PlayerGone;
+    private EnemyMovement movement;
+
+    private void Awake()
+    {
+        movement = GetComponentInParent<EnemyMovement>();
+    }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            PlayerGone?.Invoke();
+            movement.PlayerGone();
         }
     }
 }

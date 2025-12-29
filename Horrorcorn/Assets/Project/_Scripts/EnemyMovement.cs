@@ -17,42 +17,17 @@ public class EnemyMovement : MonoBehaviour
     
     private NavMeshAgent agent;
     private Coroutine followCoroutine;
+
+    private EnemyAnimation animation;
     
-    public static event Action DestinationReached;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        animation = GetComponentInChildren<EnemyAnimation>();
     }
-
-    private void Start()
-    {
-        EnemySightSensor.PlayerSighted += playerSighted;
-        EnemyDistanceSensor.PlayerGone += playerGone;
-    }
-
-    private void OnDestroy()
-    {
-        EnemySightSensor.PlayerSighted -= playerSighted;
-        EnemyDistanceSensor.PlayerGone -= playerGone;
-    }
-
-    void Update()
-    {
-        float distance = Vector3.Distance(transform.position, agent.destination);
-
-        if (distance <= 1f && !hasReachedDestination)
-        {
-            hasReachedDestination = true;
-            DestinationReached?.Invoke();
-        }
-        else if (distance > 1.5f)
-        {
-            hasReachedDestination = false;
-        }
-    }
-
-    private void playerSighted()
+    
+    public void PlayerSighted()
     {
         if (!following)
         {
@@ -61,7 +36,7 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    private void playerGone()
+    public void PlayerGone()
     {
         if (following)
         {
@@ -72,6 +47,22 @@ public class EnemyMovement : MonoBehaviour
                 agent.SetDestination(target.transform.position);
             }
             following = false;
+        }
+    }
+
+    void Update()
+    {
+        float distance = Vector3.Distance(transform.position, agent.destination);
+
+        if (distance <= 1f && !hasReachedDestination)
+        {
+            hasReachedDestination = true;
+            animation.Idle();
+            
+        }
+        else if (distance > 1.5f)
+        {
+            hasReachedDestination = false;
         }
     }
     
