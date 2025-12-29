@@ -7,21 +7,17 @@ public class EnemySightSensor : MonoBehaviour
 {
     public Transform eyeHeight;
     
-    public static event Action PlayerSighted;
+    private EnemyMovement movement;
+    private EnemyAnimation animation;
 
-    private void Start()
+    private void Awake()
     {
-        EnemySightTrigger.PlayerInTrigger += PlayerInRange;
-    }
-    
-    private void OnDestroy()
-    {
-        EnemySightTrigger.PlayerInTrigger -= PlayerInRange;
+        movement = GetComponent<EnemyMovement>();
+        animation = GetComponentInChildren<EnemyAnimation>();
     }
 
-    private void PlayerInRange()
+    public void PlayerInRange(GameObject player)
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player == null) return;
         
         Vector3 direction = (player.transform.position - eyeHeight.transform.position).normalized;
@@ -32,8 +28,8 @@ public class EnemySightSensor : MonoBehaviour
         {
             if (hit.collider.CompareTag("Player") || hit.collider.CompareTag("PlayerSensor"))
             {
-                PlayerSighted?.Invoke();
-                
+                movement.PlayerSighted();
+                animation.ChasePlayer();
                 Debug.DrawRay(eyeHeight.position, direction * hit.distance, Color.green);
             }
             else

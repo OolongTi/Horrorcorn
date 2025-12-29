@@ -3,13 +3,18 @@ using System;
 
 public class EnemySightTrigger : MonoBehaviour
 {
-    public static event Action PlayerInTrigger;
+    private EnemySightSensor sensor;
+
+    private void Awake()
+    {
+        sensor = GetComponentInParent<EnemySightSensor>();
+    }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            PlayerInTrigger?.Invoke();
+            sensor.PlayerInRange(other.gameObject);
         }
     }
 }

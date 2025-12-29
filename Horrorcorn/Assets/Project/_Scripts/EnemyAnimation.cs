@@ -5,21 +5,17 @@ public class EnemyAnimation : MonoBehaviour
     private Animator animator;
 
     private bool walking;
+    
+    private EnemyMovement movement;
 
-    void Start()
+    private void Awake()
     {
         animator = GetComponent<Animator>();
-        EnemySightSensor.PlayerSighted += ChasePlayer;
-        EnemyMovement.DestinationReached += Idle;
+        movement = GetComponentInParent<EnemyMovement>();
     }
     
-    private void OnDestroy()
-    {
-        EnemySightSensor.PlayerSighted -= ChasePlayer;
-        EnemyMovement.DestinationReached -= Idle;
-    }
 
-    private void ChasePlayer()
+    public void ChasePlayer()
     {
         if (!walking)
         {
@@ -28,7 +24,7 @@ public class EnemyAnimation : MonoBehaviour
         }
     }
 
-    private void Idle()
+    public void Idle()
     {
         animator.SetTrigger("Idle");
         walking = false;
