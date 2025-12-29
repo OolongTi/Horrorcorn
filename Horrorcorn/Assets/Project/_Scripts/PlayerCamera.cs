@@ -22,6 +22,12 @@ public class PlayerCamera : MonoBehaviour
         Cursor.visible = false;
     }
     
+    public static void UnlockCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+    
     void Update()
     {
         if (Time.timeScale == 0) return;
@@ -37,4 +43,6 @@ public class PlayerCamera : MonoBehaviour
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
         orientation.rotation = Quaternion.Euler(0f, yRotation, 0f);
     }
+
+    
 }

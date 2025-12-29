@@ -1,16 +1,26 @@
+using System.Collections.Specialized;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndMenu : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
-        
+        gameObject.SetActive(false);
+        Keys.WinEvent += EnableEndMenu;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void EnableEndMenu()
     {
-        
+        gameObject.SetActive(true);
+        TimeManager.SetPause(gameObject);
+        PlayerCamera.UnlockCursor();
+    }
+
+    public void TryAgainClicked()
+    {
+        TimeManager.RemovePause(gameObject);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
