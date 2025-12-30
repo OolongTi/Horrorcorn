@@ -34,6 +34,6 @@ public class Pickup : MonoBehaviour
 
         public void PickedUp()
         {
-                gameObject.SetActive(false);
+                Destroy(gameObject);
         }
 }

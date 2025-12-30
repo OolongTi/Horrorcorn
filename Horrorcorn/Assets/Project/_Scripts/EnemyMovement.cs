@@ -19,6 +19,11 @@ public class EnemyMovement : MonoBehaviour
     private Coroutine followCoroutine;
 
     private EnemyAnimation animation;
+
+    [SerializeField] private Transform enemyPos1;
+    [SerializeField] private Transform enemyPos2;
+    private bool goingToPos1 = false;
+    private bool reachedIdleDestination = false;
     
 
     private void Awake()
@@ -31,6 +36,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (!following)
         {
+            agent.speed = 5f;
             followCoroutine = StartCoroutine(FollowTarget());
             following = true;
         }
@@ -49,21 +55,60 @@ public class EnemyMovement : MonoBehaviour
             following = false;
         }
     }
+    
+    private void IdleWalkTo1()
+    {
+        agent.SetDestination(enemyPos1.transform.position);
+        animation.IdleWalk();
+    }
+    private void IdleWalkTo2()
+    {
+        agent.SetDestination(enemyPos2.transform.position);
+        animation.IdleWalk();
+    }
+    
 
     void Update()
     {
-        float distance = Vector3.Distance(transform.position, agent.destination);
+        
+        if(!following && hasReachedDestination)
+        {
+            agent.speed = 2f;
+            if (goingToPos1 && reachedIdleDestination)
+            {
+                IdleWalkTo1();
+            }
+            else if (!goingToPos1 && reachedIdleDestination)
+            {
+                IdleWalkTo2();
+            }
+            
+            float idleDistance = Vector3.Distance(transform.position, agent.destination);
+            if (idleDistance <= 1f && !reachedIdleDestination) 
+            {
+                reachedIdleDestination = true;
+            }
+            else if (idleDistance > 1.5f)
+            {
+                reachedIdleDestination = false;
+                goingToPos1 = !goingToPos1;
+            }
+        }
 
-        if (distance <= 1f && !hasReachedDestination)
+
+
+        float distance = Vector3.Distance(transform.position, agent.destination);
+        if (distance <= 1f && !hasReachedDestination) 
         {
             hasReachedDestination = true;
             animation.Idle();
-            
         }
         else if (distance > 1.5f)
         {
             hasReachedDestination = false;
         }
+
+        
     }
     
     private IEnumerator FollowTarget()

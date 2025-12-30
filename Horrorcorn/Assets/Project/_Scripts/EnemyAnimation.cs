@@ -24,6 +24,11 @@ public class EnemyAnimation : MonoBehaviour
         }
     }
 
+    public void IdleWalk()
+    {
+        animator.SetTrigger("IdleWalk");
+    }
+
     public void Idle()
     {
         animator.SetTrigger("Idle");
