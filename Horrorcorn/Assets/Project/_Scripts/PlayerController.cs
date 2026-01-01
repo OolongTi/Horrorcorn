@@ -3,7 +3,9 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed = 5.0f;
+    private float speed;
+    [SerializeField] private float walkSpeed = 5.0f;
+    [SerializeField] private float sprintSpeed = 10.0f;
     private bool isSprinting;
     private bool isMoving;
     public Transform orientation;
@@ -13,9 +15,11 @@ public class PlayerController : MonoBehaviour
     private float yVelocity;
     
     [SerializeField] private Image StaminaBar;
+    [SerializeField] private Image OverchargeBar;
     private bool staminaEmpty;
     [SerializeField] private float Stamina = 100f;
-    [SerializeField] private float MaxStamina = 100f;
+    private float MaxStamina = 100f;
+    private float MaxOverchargeStamina = 130f;
     
     private CharacterController characterController;
 
@@ -23,6 +27,7 @@ public class PlayerController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         PickupSensor.PickupCollected += PickedUp;
+        OverchargeBar.fillAmount = 0f;
     }
 
     void Update()
@@ -53,18 +58,46 @@ public class PlayerController : MonoBehaviour
         if (characterController.isGrounded)
         {
             yVelocity = -1f;
-
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Stamina < MaxStamina)
             {
-                yVelocity = jumpSpeed;
-                jumpSpeed = 0;
-                Stamina = 0;
-                StaminaBar.fillAmount = Stamina / MaxStamina;
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    yVelocity = jumpSpeed;
+                    jumpSpeed = 0;
+                    Stamina = 0;
+                    StaminaBar.fillAmount = Stamina / MaxStamina;
+                }
+            }
+            else if (Stamina >= MaxStamina)
+            {
+                if (Input.GetKey(KeyCode.Space))
+                {
+                    if (Stamina < MaxOverchargeStamina)
+                    {
+                        Stamina += 0.1f;
+                        jumpSpeed += 0.01f;
+                        float result = Map(Stamina, 100, 130, 0, 100);
+                        OverchargeBar.fillAmount = result / MaxStamina;
+                    }
+                }
+                else if (Input.GetKeyUp(KeyCode.Space))
+                {
+                    yVelocity = jumpSpeed;
+                    jumpSpeed = 0;
+                    Stamina = 0;
+                    OverchargeBar.fillAmount = 0f;
+                }
             }
         }
         else
         {
             yVelocity += gravity * Time.deltaTime;
+            if (Stamina >= MaxStamina)
+            { 
+                jumpSpeed = 10f;
+                Stamina = MaxStamina;
+                OverchargeBar.fillAmount = 0f;
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -76,8 +109,8 @@ public class PlayerController : MonoBehaviour
             isSprinting = false;
         }
         
-        if (isSprinting && staminaEmpty == false || isSprinting && characterController.isGrounded == false) speed = 10f;
-        else speed = 5f;
+        if (isSprinting && staminaEmpty == false || isSprinting && characterController.isGrounded == false) speed = sprintSpeed;
+        else speed = walkSpeed;
         
         movementVector *= speed;
         movementVector.y = yVelocity;
@@ -116,6 +149,13 @@ public class PlayerController : MonoBehaviour
 
     void PickedUp(Pickup pickup)
     {
+        walkSpeed += 1f;
+        sprintSpeed += 1f;
         pickup.PickedUp();
+    }
+    
+    private static float Map(float value, float fromSource, float toSource, float fromTarget, float toTarget)
+    {
+        return (value - fromSource) * (toTarget - fromTarget) / (toSource - fromSource) + fromTarget;
     }
 }
