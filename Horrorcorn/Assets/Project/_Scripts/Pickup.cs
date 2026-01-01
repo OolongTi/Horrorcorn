@@ -10,6 +10,7 @@ public class Pickup : MonoBehaviour
 
         private void Update()
         {
+                /*
                 _pickupRotation += 0.2f;
                 
                 if (_goingUp)
@@ -30,6 +31,7 @@ public class Pickup : MonoBehaviour
                 
                 gameObject.transform.rotation = Quaternion.Euler(90, _pickupRotation, 0);
                 gameObject.transform.position = new Vector3(gameObject.transform.position.x, _pickupHeight, gameObject.transform.position.z);
+                */
         }
 
         public void PickedUp()
