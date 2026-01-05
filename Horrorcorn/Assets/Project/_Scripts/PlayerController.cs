@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (Time.timeScale == 0) return;
+        
+        // Movement Input Logic
         Vector3 movementVector = Vector3.zero;
 
         if (Input.GetKey(KeyCode.W))
@@ -60,9 +62,53 @@ public class PlayerController : MonoBehaviour
         movementVector.Normalize();
         isMoving = movementVector.sqrMagnitude > 0;
 
+        
+        //Handle Gravity
+        if (characterController.isGrounded && yVelocity < 0)
+        {
+            yVelocity = -2f;
+        }
+        else
+        {
+            yVelocity += gravity * Time.deltaTime;
+        }
+        
+        // Stamina Bar Logic
+        // Regeneration
+        if (Stamina < MaxStamina && (!isSprinting || !isMoving))
+        {
+            Stamina += 50f * Time.deltaTime;
+            Stamina = Mathf.Min(Stamina, MaxStamina);
+            StaminaBar.fillAmount = Stamina / MaxStamina;
+            if (jumpSpeed <= 10f)
+            {
+                jumpSpeed += 5f * Time.deltaTime;
+            } 
+        }
+        
+        // Sprint Drain
+        if (isSprinting && isMoving)
+        {
+            Stamina -= 20f * Time.deltaTime;
+            jumpSpeed -= 2f * Time.deltaTime;
+            StaminaBar.fillAmount = Stamina / MaxStamina;
+        }
+        
+        // Stamina Empty Check
+        if (Stamina <= 0)
+        {
+            Stamina = 0;
+            jumpSpeed = Mathf.Max(jumpSpeed, 0f);
+            staminaEmpty = true;
+        }
+        else
+        {
+            staminaEmpty = false;
+        }
+        
+        // Jumping Logic
         if (characterController.isGrounded)
         {
-            yVelocity = -1f;
             if (Stamina < MaxStamina)
             {
                 if (Input.GetKeyDown(KeyCode.Space))
@@ -79,8 +125,8 @@ public class PlayerController : MonoBehaviour
                 {
                     if (Stamina < MaxOverchargeStamina)
                     {
-                        Stamina += 0.1f;
-                        jumpSpeed += 0.01f;
+                        Stamina += 15f * Time.deltaTime;
+                        jumpSpeed += 5f * Time.deltaTime;
                         float result = Map(Stamina, 100, 130, 0, 100);
                         OverchargeBar.fillAmount = result / MaxStamina;
                     }
@@ -96,7 +142,6 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            yVelocity += gravity * Time.deltaTime;
             if (Stamina >= MaxStamina)
             { 
                 jumpSpeed = 10f;
@@ -117,6 +162,7 @@ public class PlayerController : MonoBehaviour
         if (isSprinting && staminaEmpty == false || isSprinting && characterController.isGrounded == false) speed = sprintSpeed;
         else speed = walkSpeed;
         
+        // Apply Movement
         movementVector *= speed;
         movementVector.y = yVelocity;
         
@@ -125,31 +171,7 @@ public class PlayerController : MonoBehaviour
     
     void FixedUpdate()
     {
-        if (Stamina < MaxStamina && (!isSprinting || !isMoving))
-        {
-            Stamina += 1f;
-            StaminaBar.fillAmount = Stamina / MaxStamina;
-            if (jumpSpeed <= 10f)
-            {
-                jumpSpeed += 0.1f;
-            } 
-        }
-        if (isSprinting && isMoving)
-        {
-            Stamina -= 0.1f;
-            jumpSpeed -= 0.01f;
-            StaminaBar.fillAmount = Stamina / MaxStamina;
-        }
-        if (Stamina <= 0)
-        {
-            Stamina = 0;
-            jumpSpeed = 0;
-            staminaEmpty = true;
-        }
-        else
-        {
-            staminaEmpty = false;
-        }
+        
     }
 
     void PickedUp(Pickup pickup)

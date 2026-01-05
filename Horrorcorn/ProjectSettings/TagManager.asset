@@ -6,7 +6,6 @@ TagManager:
   tags:
   - PlayerSensor
   - KeyPickup
-  - EndMenu
   - StartMenu
   layers:
   - Default
