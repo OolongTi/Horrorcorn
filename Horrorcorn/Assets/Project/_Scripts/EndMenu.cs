@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class EndMenu : MonoBehaviour
 {
-
+    /*
     void Start()
     {
         gameObject.SetActive(false);
@@ -24,4 +24,5 @@ public class EndMenu : MonoBehaviour
         TimeManager.RemovePause(gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    */
 }

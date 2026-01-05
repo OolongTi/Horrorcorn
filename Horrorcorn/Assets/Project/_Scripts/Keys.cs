@@ -8,7 +8,7 @@ public class Keys : MonoBehaviour
     public int keys = 0;
     [SerializeField] private TextMeshProUGUI keysText;
 
-    public static event Action WinEvent;
+    public static event Action<string> WinEvent;
 
     void Start()
     {
@@ -21,8 +21,13 @@ public class Keys : MonoBehaviour
         keysText.text = $"Keys: {keys}/4";
         if (keys == 4)
         {
-            WinEvent?.Invoke();
+            WinEvent?.Invoke("You Won!");
         }
+    }
+    
+    void OnDestroy()
+    {
+        PickupSensor.PickupCollected -= KeyCollected;
     }
     
     void Update()

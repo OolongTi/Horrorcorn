@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemyKillScript : MonoBehaviour
 {
-    public static event Action LooseEvent;
+    public static event Action<string> LooseEvent;
     
     void Start()
     {
@@ -19,7 +19,7 @@ public class EnemyKillScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            LooseEvent?.Invoke();
+            LooseEvent?.Invoke("You were caught!");
         }
     }
 }

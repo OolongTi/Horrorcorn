@@ -29,6 +29,11 @@ public class PlayerController : MonoBehaviour
         PickupSensor.PickupCollected += PickedUp;
         OverchargeBar.fillAmount = 0f;
     }
+    
+    void OnDestroy()
+    {
+        PickupSensor.PickupCollected -= PickedUp;
+    }
 
     void Update()
     {
