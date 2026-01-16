@@ -58,11 +58,13 @@ public class EnemyMovement : MonoBehaviour
     
     private void IdleWalkTo1()
     {
+
         agent.SetDestination(enemyPos1.transform.position);
         animation.IdleWalk();
     }
     private void IdleWalkTo2()
     {
+
         agent.SetDestination(enemyPos2.transform.position);
         animation.IdleWalk();
     }
@@ -84,12 +86,14 @@ public class EnemyMovement : MonoBehaviour
             }
             
             float idleDistance = Vector3.Distance(transform.position, agent.destination);
-            if (idleDistance <= 1f && !reachedIdleDestination) 
+            if (idleDistance <= 5f && !reachedIdleDestination) 
             {
+
                 reachedIdleDestination = true;
             }
             else if (idleDistance > 1.5f)
             {
+
                 reachedIdleDestination = false;
                 goingToPos1 = !goingToPos1;
             }
