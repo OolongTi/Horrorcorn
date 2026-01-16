@@ -13,12 +13,17 @@ public class Keys : MonoBehaviour
     void Start()
     {
         PickupSensor.PickupCollected += KeyCollected;
+        EndGoalScript.ReachedGoalEvent += ReachedGoal;
     }
 
     private void KeyCollected(Pickup pickup)
     {
         keys++;
         keysText.text = $"Keys: {keys}/4";
+    }
+    
+    public void ReachedGoal()
+    {
         if (keys == 4)
         {
             WinEvent?.Invoke("You Won!");

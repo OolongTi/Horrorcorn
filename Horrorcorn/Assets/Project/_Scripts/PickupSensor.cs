@@ -5,6 +5,7 @@ public class PickupSensor : MonoBehaviour
 {
     public static event Action<Pickup> PickupCollected;
 
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("KeyPickup"))

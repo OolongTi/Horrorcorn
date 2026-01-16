@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpSpeed = 10f;
     [SerializeField] private float gravity = -30f;
     private float yVelocity;
+    private bool onPlatform;
+
     
     [SerializeField] private Image StaminaBar;
     [SerializeField] private Image OverchargeBar;
@@ -63,15 +66,18 @@ public class PlayerController : MonoBehaviour
         isMoving = movementVector.sqrMagnitude > 0;
 
         
-        //Handle Gravity
+        //Handle Gravity and Platforms
+
         if (characterController.isGrounded && yVelocity < 0)
-        {
+        { 
             yVelocity = -2f;
         }
         else
         {
             yVelocity += gravity * Time.deltaTime;
         }
+        
+        
         
         // Stamina Bar Logic
         // Regeneration

@@ -10,6 +10,7 @@ public class StartMenu : MonoBehaviour
     {
         Keys.WinEvent += EnableEndMenu;
         EnemyKillScript.LooseEvent += EnableEndMenu;
+        VoidScript.FellIntoVoid += FellIntoVoid;
         if (WinOrLoseText != null && PreviousEndMessage != "")
         {
             WinOrLoseText.text = PreviousEndMessage;
@@ -20,6 +21,11 @@ public class StartMenu : MonoBehaviour
                 WinOrLoseText.color = Color.red; 
             }
         }
+    }
+    
+    void FellIntoVoid()
+    {
+        EnableEndMenu("You fell into the void!");
     }
     
     void OnEnable()
