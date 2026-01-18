@@ -34,7 +34,6 @@ public class KeySpawner : MonoBehaviour
 
         if (keyTransform != null)
         {
-            Debug.Log(position);
             Instantiate(keyPrefab, keyTransform.position, keyTransform.rotation, keyTransform);
         }
     }

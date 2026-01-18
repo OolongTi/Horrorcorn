@@ -79,6 +79,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
+        /*
         var emission = Dust.emission;
         bool isMoving = agent.velocity.magnitude > 0.1f;
         
@@ -99,6 +100,7 @@ public class EnemyMovement : MonoBehaviour
         {
             emission.rateOverTime = 0f;
         }
+        */
         
         if(!following && hasReachedDestination)
         {

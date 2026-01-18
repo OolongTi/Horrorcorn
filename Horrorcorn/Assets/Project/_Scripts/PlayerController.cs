@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    private float speed;
+    [SerializeField] private float speed;
     [SerializeField] private float walkSpeed = 5.0f;
     [SerializeField] private float sprintSpeed = 10.0f;
     private bool isSprinting;
@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
     private float MaxOverchargeStamina = 130f;
     
     private CharacterController characterController;
+
+    [SerializeField] private AK.Wwise.RTPC speedRtpc;
 
     private void Start()
     {
@@ -168,10 +170,16 @@ public class PlayerController : MonoBehaviour
         if (isSprinting && staminaEmpty == false || isSprinting && characterController.isGrounded == false) speed = sprintSpeed;
         else speed = walkSpeed;
         
+        if(!isMoving)
+        {
+            speed = 0f;
+        }
+        
         // Apply Movement
         movementVector *= speed;
         movementVector.y = yVelocity;
         
+        speedRtpc.SetValue(gameObject, speed);
         characterController.Move(movementVector * Time.deltaTime);
     }
     

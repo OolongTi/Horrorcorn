@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a3ede88a4e1b34c86df7a7bb7f47d8, type: 3}
+  m_Name: 2A2E3277-E1AE-48D1-8DDA-AA5F1CC64BA5
+  m_EditorClassIdentifier: 
+  objectName: TestEvent
+  id: 1097980931
+  guid: 2A2E3277-E1AE-48D1-8DDA-AA5F1CC64BA5
+  IsInUserDefinedSoundBank: 1

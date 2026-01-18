@@ -1,0 +1,249 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2228651116",
+    "Type": "User",
+    "GUID": "{B2AEE5B6-EB08-4297-960C-9A429FE53F43}",
+    "Language": "SFX",
+    "Hash": "{FD9F84CB-B850-DBC2-6144-F1A792B64BEB}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main_Soundbank",
+    "ShortName": "Main_Soundbank",
+    "Path": "Main_Soundbank.bnk",
+    "Media": [
+     {
+      "Id": "245338401",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "731047__moodyfingers__keychain-grabbing.wav",
+      "CachePath": "20/{20E6F292-15EB-B865-5E4D-AE0F41F23413}.wem"
+     },
+     {
+      "Id": "270011448",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "403163__fallujahqc__footstep_grass.wav",
+      "CachePath": "A0/{A0E8F2D7-6DAA-770C-C7AC-BDCD32EFA269}.wem"
+     },
+     {
+      "Id": "271047571",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "731047__moodyfingers__keychain-grabbing.wav",
+      "CachePath": "49/{49436601-2CDE-F238-5B2C-CD910D25ED7D}.wem"
+     },
+     {
+      "Id": "383489278",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "731047__moodyfingers__keychain-grabbing.wav",
+      "CachePath": "35/{35285472-4510-250C-D3D1-3145AD5F1E32}.wem"
+     },
+     {
+      "Id": "398961623",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "731047__moodyfingers__keychain-grabbing.wav",
+      "CachePath": "32/{323658BD-5043-E816-B16C-071D168D3C48}.wem"
+     },
+     {
+      "Id": "448474463",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "731047__moodyfingers__keychain-grabbing.wav",
+      "CachePath": "8C/{8C0B59B1-2FC5-A469-D905-DE154D63DB2A}.wem"
+     },
+     {
+      "Id": "500718068",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "731047__moodyfingers__keychain-grabbing.wav",
+      "CachePath": "20/{20F6BCC4-40B0-4DBE-16D8-7538D7FFA756}.wem"
+     },
+     {
+      "Id": "541101431",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "157058__slave2thelight__sleestak-zombie-2.wav",
+      "CachePath": "15/{1559FA17-7C87-8765-FF3F-628F19894DBC}.wem"
+     },
+     {
+      "Id": "588241039",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "731047__moodyfingers__keychain-grabbing.wav",
+      "CachePath": "00/{001B6E5A-4880-1FCE-7D8C-A78C8ABA4C12}.wem"
+     },
+     {
+      "Id": "588941591",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "731047__moodyfingers__keychain-grabbing.wav",
+      "CachePath": "79/{79A2F740-1F7E-B4EC-90DA-B3F1F9EC112E}.wem"
+     },
+     {
+      "Id": "622462580",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "731047__moodyfingers__keychain-grabbing.wav",
+      "CachePath": "90/{90521D0E-0F00-E013-5D61-0B8646A77130}.wem"
+     },
+     {
+      "Id": "708032726",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "731047__moodyfingers__keychain-grabbing.wav",
+      "CachePath": "BE/{BEDA15DC-62DC-BE26-DCBB-699213C9B050}.wem"
+     },
+     {
+      "Id": "910162288",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "731047__moodyfingers__keychain-grabbing.wav",
+      "CachePath": "3F/{3F6D62F5-9467-4CAB-6854-D7D14D2F4136}.wem"
+     },
+     {
+      "Id": "949727889",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "403163__fallujahqc__footstep_grass.wav",
+      "CachePath": "08/{0852C829-1A06-423F-2D8E-5D6024FF6DEC}.wem"
+     },
+     {
+      "Id": "959806527",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "322604__lxx70__scary-night-base-layer.wav",
+      "CachePath": "C2/{C2BEC92F-64BD-3865-E158-76B908173B94}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1103958200",
+      "Name": "EnemyWalk",
+      "ObjectPath": "\\Events\\Default Work Unit\\EnemyWalk",
+      "GUID": "{4A75E30F-1875-48B1-9D3A-C58742B6F8D6}",
+      "MaxAttenuation": "100",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "541101431"
+       }
+      ]
+     },
+     {
+      "Id": "3105125657",
+      "Name": "KeyPickedUp",
+      "ObjectPath": "\\Events\\Default Work Unit\\KeyPickedUp",
+      "GUID": "{7D35D158-F88F-4714-A4E4-2A6DE081F8E7}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.3521477",
+      "DurationMax": "0.69955266",
+      "MediaRefs": [
+       {
+        "Id": "245338401"
+       },
+       {
+        "Id": "271047571"
+       },
+       {
+        "Id": "383489278"
+       },
+       {
+        "Id": "398961623"
+       },
+       {
+        "Id": "448474463"
+       },
+       {
+        "Id": "500718068"
+       },
+       {
+        "Id": "588241039"
+       },
+       {
+        "Id": "588941591"
+       },
+       {
+        "Id": "622462580"
+       },
+       {
+        "Id": "708032726"
+       },
+       {
+        "Id": "910162288"
+       }
+      ]
+     },
+     {
+      "Id": "1952464646",
+      "Name": "Play_BackgroundAmbience",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_BackgroundAmbience",
+      "GUID": "{0AC1DC95-F513-4A2E-BBD8-14672A02EBD2}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "959806527"
+       }
+      ]
+     },
+     {
+      "Id": "2539379111",
+      "Name": "PlayerWalkAndRun",
+      "ObjectPath": "\\Events\\Default Work Unit\\PlayerWalkAndRun",
+      "GUID": "{DAD830F0-E5A8-4EE6-8B6D-CA41F07B5042}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "270011448"
+       },
+       {
+        "Id": "949727889"
+       }
+      ]
+     },
+     {
+      "Id": "1097980931",
+      "Name": "TestEvent",
+      "ObjectPath": "\\Events\\Default Work Unit\\TestEvent",
+      "GUID": "{2A2E3277-E1AE-48D1-8DDA-AA5F1CC64BA5}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "949727889"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1493153371",
+      "Name": "PlayerSpeed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\PlayerSpeed",
+      "GUID": "{438750C3-4DA5-4FB4-AE9C-4075BF445B43}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{474C44EA-1F95-D390-8D81-7438DE6DB238}"
+ }
+}

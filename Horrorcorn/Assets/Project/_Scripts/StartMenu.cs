@@ -6,6 +6,20 @@ public class StartMenu : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI WinOrLoseText;
     private static string PreviousEndMessage = "";
+
+    public static StartMenu instance;
+    
+    void Awake()
+    {
+        if(instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        
+        instance = this;
+        DontDestroyOnLoad(this);
+    }
     void Start()
     {
         Keys.WinEvent += EnableEndMenu;
