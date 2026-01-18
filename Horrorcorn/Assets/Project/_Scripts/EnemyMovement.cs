@@ -20,6 +20,13 @@ public class EnemyMovement : MonoBehaviour
 
     private EnemyAnimation animation;
 
+    public ParticleSystem Dust;
+    
+    public float fastEmissionRate = 10f; 
+    public float slowEmissionRate = 3f;
+    
+    
+
     [SerializeField] private Transform enemyPos1;
     [SerializeField] private Transform enemyPos2;
     private bool goingToPos1 = false;
@@ -72,6 +79,26 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
+        var emission = Dust.emission;
+        bool isMoving = agent.velocity.magnitude > 0.1f;
+        
+
+
+        if (isMoving)
+        {
+            if (following)
+            {
+                emission.rateOverTime = fastEmissionRate;
+            }
+            else
+            {
+                emission.rateOverTime = slowEmissionRate;
+            }
+        }
+        else
+        {
+            emission.rateOverTime = 0f;
+        }
         
         if(!following && hasReachedDestination)
         {
