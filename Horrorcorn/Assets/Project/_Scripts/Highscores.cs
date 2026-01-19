@@ -5,6 +5,18 @@ using UnityEngine;
 
 public class HighScores
 {
+    private static float time;
+    
+    private void Start()
+    {
+        Timer.giveTimerEvent +=  SetTime; 
+    }
+    
+    private void SetTime(float t)
+    {
+        time = t;
+    }
+    
     public class Entry
     {
         public string Name;
@@ -12,7 +24,7 @@ public class HighScores
 
         public override string ToString()
         {
-            return $"{Name}: {Timer.timerText.text}";
+            return $"{Name}: {time}";
         }
     }
     
