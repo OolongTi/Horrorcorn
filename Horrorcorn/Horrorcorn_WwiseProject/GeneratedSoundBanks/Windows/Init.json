@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{BD9D90AB-C410-EAF5-D109-69095DF3D3FD}",
+    "Hash": "{D8A509EF-CE3D-D52A-DEA5-9DCDDF8AC58E}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -49,9 +49,37 @@
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\PlayerSpeed",
       "GUID": "{438750C3-4DA5-4FB4-AE9C-4075BF445B43}"
      }
+    ],
+    "StateGroups": [
+     {
+      "Id": "4074543262",
+      "Name": "GameBackgroundNoiseState",
+      "ObjectPath": "\\States\\Default Work Unit\\GameBackgroundNoiseState",
+      "GUID": "{ADF65763-5248-43E6-A2A6-A12D96A9D334}",
+      "States": [
+       {
+        "Id": "702482391",
+        "Name": "Game",
+        "ObjectPath": "\\States\\Default Work Unit\\GameBackgroundNoiseState\\Game",
+        "GUID": "{C04E7DCF-C93C-4B37-86A8-070ED73BF400}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\GameBackgroundNoiseState\\None",
+        "GUID": "{BEE7FDC4-4711-42FF-A5A9-4EB166003EC6}"
+       },
+       {
+        "Id": "2607556080",
+        "Name": "Menu",
+        "ObjectPath": "\\States\\Default Work Unit\\GameBackgroundNoiseState\\Menu",
+        "GUID": "{C45F37F5-26D4-4CAE-8E16-B5CE05C83A8E}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{655760DF-6093-F5E3-C0A2-08A94FB0CD28}"
+  "FileHash": "{1745E920-DA38-3B7D-BB49-E0F1DCE24428}"
  }
 }

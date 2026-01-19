@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,6 +9,9 @@ public class StartMenu : MonoBehaviour
     private static string PreviousEndMessage = "";
 
     public static StartMenu instance;
+
+    public static event Action MenuOpen;
+    public static event Action MenuClosed;
     
     void Awake()
     {
@@ -44,6 +48,7 @@ public class StartMenu : MonoBehaviour
     
     void OnEnable()
     {
+        
         TimeManager.SetPause(gameObject);
     }
 
@@ -54,6 +59,7 @@ public class StartMenu : MonoBehaviour
 
     public void StartClicked()
     {
+        MenuClosed?.Invoke();
         PlayerCamera.LockCursor();
         gameObject.SetActive(false);
     }
@@ -65,6 +71,7 @@ public class StartMenu : MonoBehaviour
     
     private void EnableEndMenu(string message)
     {
+        MenuOpen?.Invoke();
         TimeManager.SetPause(gameObject);
         PlayerCamera.UnlockCursor();
         PreviousEndMessage = message;

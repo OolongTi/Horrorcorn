@@ -1,6 +1,628 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{1822CDDD-4C24-41B4-81B5-AF994A18438B}" SchemaVersion="133">
 	<Containers>
-		<WorkUnit Name="Default Work Unit" ID="{1822CDDD-4C24-41B4-81B5-AF994A18438B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{1822CDDD-4C24-41B4-81B5-AF994A18438B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="322604__lxx70__scary-night-base-layer" ID="{368C368E-2CCD-4BB1-B3FF-CFB39CBDE208}" ShortID="245109739">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="322604__lxx70__scary-night-base-layer" ID="{F1D69431-C354-465D-8E06-52426604C1C5}">
+							<Language>SFX</Language>
+							<AudioFile>322604__lxx70__scary-night-base-layer.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="727205140"/>
+							</MediaIDList>
+						</AudioFileSource>
+						<AudioFileSource Name="322604__lxx70__scary-night-base-layer" ID="{08850EDF-12E7-44E9-965F-66BA21817626}">
+							<Language>SFX</Language>
+							<AudioFile>322604__lxx70__scary-night-base-layer.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="727205140"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="322604__lxx70__scary-night-base-layer" ID="{08850EDF-12E7-44E9-965F-66BA21817626}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="543806__nox_sound__footsteps_mountain_boots_gritty_ground_stones_pebbles_mono" ID="{32F7380B-6731-43B2-910F-435D682E0EED}" ShortID="172110759">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="543806__nox_sound__footsteps_mountain_boots_gritty_ground_stones_pebbles_mono" ID="{B78F1971-59E1-409E-B26D-7F8F8777A742}">
+							<Language>SFX</Language>
+							<AudioFile>543806__nox_sound__footsteps_mountain_boots_gritty_ground_stones_pebbles_mono.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="107524087"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="543806__nox_sound__footsteps_mountain_boots_gritty_ground_stones_pebbles_mono" ID="{B78F1971-59E1-409E-B26D-7F8F8777A742}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="842088__adiantheman__spooky-ambience" ID="{A7F826DD-7675-4956-8B67-E67150428AAD}" ShortID="745223470">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="842088__adiantheman__spooky-ambience" ID="{458CD7BB-5025-46D1-A7C3-FE55AB45DDF8}">
+							<Language>SFX</Language>
+							<AudioFile>842088__adiantheman__spooky-ambience.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="743090927"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="842088__adiantheman__spooky-ambience" ID="{458CD7BB-5025-46D1-A7C3-FE55AB45DDF8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Folder Name="EditedFiles" ID="{07525DB3-8740-457F-9892-C61CFAA45589}" ShortID="557612171">
+					<ChildrenList>
+						<Sound Name="BackgroundSound" ID="{DB02A602-1E81-4412-AE2F-C7F1DE1CB1AC}" ShortID="372900354">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="322604__lxx70__scary-night-base-layer_01" ID="{FBBAAA49-5EE5-4D66-8575-B7A50178A6DB}">
+									<Language>SFX</Language>
+									<AudioFile>322604__lxx70__scary-night-base-layer.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="270985122"/>
+									</MediaIDList>
+								</AudioFileSource>
+								<AudioFileSource Name="322604__lxx70__scary-night-base-layer" ID="{0C164207-572E-4F7B-82F0-281B5FA20D49}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="4.35714037375221"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.1785701868761"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="155.114172808475"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>322604__lxx70__scary-night-base-layer.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="959806527"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="322604__lxx70__scary-night-base-layer" ID="{0C164207-572E-4F7B-82F0-281B5FA20D49}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Sound Name="zombieWalk" ID="{FBA3600B-C71B-4CF3-92CB-12BEBF67E809}" ShortID="1024342232">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ZombieAttenuation" ID="{E7DDDE02-D062-44F9-970F-46B8123A8E58}" WorkUnitID="{D5871CE0-797B-455D-83DC-A1BA358E362E}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="157058__slave2thelight__sleestak-zombie-2" ID="{77239640-1878-4580-B6DD-33CA932CADEC}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="2.22869085496472"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.706658075964427"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="66.4802176169519"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>157058__slave2thelight__sleestak-zombie-2.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="541101431"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="157058__slave2thelight__sleestak-zombie-2" ID="{77239640-1878-4580-B6DD-33CA932CADEC}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="157125__slave2thelight__solo-zombie-3" ID="{2655D870-F0AE-4573-A53A-A6F7C538185B}" ShortID="507066683">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="157125__slave2thelight__solo-zombie-3" ID="{89133AEE-8607-455C-9146-6B6077ABA806}">
+							<Language>SFX</Language>
+							<AudioFile>157125__slave2thelight__solo-zombie-3.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1072025092"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="157125__slave2thelight__solo-zombie-3" ID="{89133AEE-8607-455C-9146-6B6077ABA806}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="157130__slave2thelight__solo-zombie-8" ID="{9F396B69-4C38-4584-B07E-39B8A911B873}" ShortID="910124136">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="157130__slave2thelight__solo-zombie-8" ID="{F607378C-AA1C-4C51-946A-E1C4CE859261}">
+							<Language>SFX</Language>
+							<AudioFile>157130__slave2thelight__solo-zombie-8.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="784897722"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="157130__slave2thelight__solo-zombie-8" ID="{F607378C-AA1C-4C51-946A-E1C4CE859261}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<BlendContainer Name="PlayerWalkBlend" ID="{E41426C8-CD70-4BE4-9B34-23FD2BCF4C30}" ShortID="445188307">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="FootstepsWalking" ID="{35C3016D-3005-4D6D-AD03-0909319485D7}" ShortID="772620794">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="403163__fallujahqc__footstep_grass" ID="{5B727611-2920-4AB6-BE12-9C23BE6BE985}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.345898764045292"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="11.403850009361"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>403163__fallujahqc__footstep_grass.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="949727889"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="403163__fallujahqc__footstep_grass" ID="{5B727611-2920-4AB6-BE12-9C23BE6BE985}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FootstepsRunning" ID="{EA726626-2A1C-4C59-8CD2-9DB2811B04B0}" ShortID="678167662">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>700</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="403163__fallujahqc__footstep_grass" ID="{66C97F10-0B0E-4EC2-9B9B-8B1E8862FFA3}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.41075478230378"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="11.403850009361"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>403163__fallujahqc__footstep_grass.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="270011448"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="403163__fallujahqc__footstep_grass" ID="{66C97F10-0B0E-4EC2-9B9B-8B1E8862FFA3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<BlendTrackList>
+						<BlendTrack Name="New Blend Track" ID="{9A64A23D-F50C-4DB7-8486-AFCA3224C93B}" ShortID="487135144">
+							<PropertyList>
+								<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="LayerCrossFadeControlInput">
+									<ObjectRef Name="PlayerSpeed" ID="{438750C3-4DA5-4FB4-AE9C-4075BF445B43}" WorkUnitID="{F887E254-473A-4DA8-ACE0-A480DA51ADF4}"/>
+								</Reference>
+							</ReferenceList>
+							<BlendTrackAssocList>
+								<BlendTrackAssoc>
+									<ItemRef Name="FootstepsWalking" ID="{35C3016D-3005-4D6D-AD03-0909319485D7}"/>
+									<CrossfadingInfo>
+										<LeftEdgePos>0.941469489414695</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<RightEdgePos>9.3016198630137</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+								<BlendTrackAssoc>
+									<ItemRef Name="FootstepsRunning" ID="{EA726626-2A1C-4C59-8CD2-9DB2811B04B0}"/>
+									<CrossfadingInfo>
+										<LeftEdgePos>9.33125871731009</LeftEdgePos>
+										<LeftFadingMode>Automatic</LeftFadingMode>
+										<RightEdgePos>14</RightEdgePos>
+										<RightFadingMode>Automatic</RightFadingMode>
+									</CrossfadingInfo>
+								</BlendTrackAssoc>
+							</BlendTrackAssocList>
+						</BlendTrack>
+					</BlendTrackList>
+				</BlendContainer>
+				<RandomSequenceContainer Name="Keys" ID="{261BED1A-D6FC-4595-8CE5-E325FAA01871}" ShortID="1042702419">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="731047__moodyfingers__keychain-grabbing" ID="{9E5629D0-1505-41F4-BA02-FC2431DF505D}" ShortID="768353502">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="731047__moodyfingers__keychain-grabbing" ID="{8ECAB8EC-1B51-4759-8FE2-AA59B6B6893D}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.699552628896013"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>731047__moodyfingers__keychain-grabbing.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="245338401"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="731047__moodyfingers__keychain-grabbing" ID="{8ECAB8EC-1B51-4759-8FE2-AA59B6B6893D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="731047__moodyfingers__keychain-grabbing_01" ID="{9185C3A3-1F9A-4DDF-B1D5-EA790CAD4D95}" ShortID="741049199">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="731047__moodyfingers__keychain-grabbing" ID="{67378779-86DE-4BB7-A0BD-67AA0A31DAC7}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.883333345738854"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.33389268254741"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>731047__moodyfingers__keychain-grabbing.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="708032726"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="731047__moodyfingers__keychain-grabbing" ID="{67378779-86DE-4BB7-A0BD-67AA0A31DAC7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="731047__moodyfingers__keychain-grabbing_02" ID="{A92DD339-E0E6-418F-A30D-F813BD81CA38}" ShortID="84994226">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="731047__moodyfingers__keychain-grabbing" ID="{A836BA82-9CF5-41CA-BE04-1A5523EFC45B}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.62438481028487"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.09272938224253"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>731047__moodyfingers__keychain-grabbing.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="448474463"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="731047__moodyfingers__keychain-grabbing" ID="{A836BA82-9CF5-41CA-BE04-1A5523EFC45B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="731047__moodyfingers__keychain-grabbing_03" ID="{89141F14-DA02-4A84-B965-B67CE0603CB9}" ShortID="923409674">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="731047__moodyfingers__keychain-grabbing" ID="{935A38F9-73F0-4118-AE43-78578E1243EE}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.40100674512909"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.88120814051949"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>731047__moodyfingers__keychain-grabbing.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="588941591"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="731047__moodyfingers__keychain-grabbing" ID="{935A38F9-73F0-4118-AE43-78578E1243EE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="731047__moodyfingers__keychain-grabbing_04" ID="{AB995057-385D-44B7-A840-049998586BE9}" ShortID="978076745">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="731047__moodyfingers__keychain-grabbing" ID="{4206DA37-DAB5-44F0-8874-586DDBB2979A}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.0887025042278"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.46812090043994"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>731047__moodyfingers__keychain-grabbing.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="398961623"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="731047__moodyfingers__keychain-grabbing" ID="{4206DA37-DAB5-44F0-8874-586DDBB2979A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="731047__moodyfingers__keychain-grabbing_05" ID="{C2FB93FC-D6EC-46C1-8BE9-3689C5099BC5}" ShortID="843463902">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="731047__moodyfingers__keychain-grabbing" ID="{712EA45B-DAD5-4AAA-83D2-B74A4CC8CBFE}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.68747208758098"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.03961978989782"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>731047__moodyfingers__keychain-grabbing.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="271047571"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="731047__moodyfingers__keychain-grabbing" ID="{712EA45B-DAD5-4AAA-83D2-B74A4CC8CBFE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="731047__moodyfingers__keychain-grabbing_06" ID="{87F0AC0A-CF6C-46E2-86DA-A28E3CC1BFCF}" ShortID="359535624">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="731047__moodyfingers__keychain-grabbing" ID="{B1F0F86E-4682-4E36-817F-9B227D9267B5}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="4.32181214123238"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.72494418430998"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>731047__moodyfingers__keychain-grabbing.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="910162288"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="731047__moodyfingers__keychain-grabbing" ID="{B1F0F86E-4682-4E36-817F-9B227D9267B5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="731047__moodyfingers__keychain-grabbing_07" ID="{930DE1CE-0903-409D-8214-41CF99087D93}" ShortID="199553745">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="731047__moodyfingers__keychain-grabbing" ID="{06C61B68-1016-4C74-BFE8-830183F1EA19}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="4.9502237831674"/>
+										<Property Name="TrimEnd" Type="Real64" Value="5.35928423796137"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>731047__moodyfingers__keychain-grabbing.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="588241039"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="731047__moodyfingers__keychain-grabbing" ID="{06C61B68-1016-4C74-BFE8-830183F1EA19}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="731047__moodyfingers__keychain-grabbing_08" ID="{0AB51C48-46AC-40E9-9A95-55971832C7C2}" ShortID="744434400">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="731047__moodyfingers__keychain-grabbing" ID="{3E3ECEBE-5BB3-4D88-8C00-F37CB313C1F8}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="5.47785242592417"/>
+										<Property Name="TrimEnd" Type="Real64" Value="5.88691288071814"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>731047__moodyfingers__keychain-grabbing.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="500718068"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="731047__moodyfingers__keychain-grabbing" ID="{3E3ECEBE-5BB3-4D88-8C00-F37CB313C1F8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="731047__moodyfingers__keychain-grabbing_09" ID="{C0366F07-431E-479B-ADC3-537E92585324}" ShortID="721484346">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="731047__moodyfingers__keychain-grabbing" ID="{51487ECD-A9EA-4123-9239-B64C43795614}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="6.37897100681212"/>
+										<Property Name="TrimEnd" Type="Real64" Value="6.82953034362067"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>731047__moodyfingers__keychain-grabbing.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="622462580"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="731047__moodyfingers__keychain-grabbing" ID="{51487ECD-A9EA-4123-9239-B64C43795614}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="731047__moodyfingers__keychain-grabbing_10" ID="{597976BB-5F21-4FE8-8E6A-455ECD210916}" ShortID="464012174">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="731047__moodyfingers__keychain-grabbing" ID="{4F255D9F-B3A8-4BC3-A2AA-0067A0F78E1E}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="6.93624170815072"/>
+										<Property Name="TrimEnd" Type="Real64" Value="7.29787486921375"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>731047__moodyfingers__keychain-grabbing.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="383489278"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="731047__moodyfingers__keychain-grabbing" ID="{4F255D9F-B3A8-4BC3-A2AA-0067A0F78E1E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</Containers>
 </WwiseDocument>

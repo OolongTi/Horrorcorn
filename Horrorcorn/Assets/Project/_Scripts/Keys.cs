@@ -9,6 +9,7 @@ public class Keys : MonoBehaviour
     [SerializeField] private TextMeshProUGUI keysText;
 
     public static event Action<string> WinEvent;
+    public static event Action AlleKeysEvent;
 
     void Start()
     {
@@ -20,6 +21,10 @@ public class Keys : MonoBehaviour
     {
         keys++;
         keysText.text = $"Keys: {keys}/4";
+        if (keys == 4)
+        {
+            AlleKeysEvent?.Invoke();
+        }
     }
     
     public void ReachedGoal()
