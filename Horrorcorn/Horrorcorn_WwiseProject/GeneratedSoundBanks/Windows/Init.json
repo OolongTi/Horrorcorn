@@ -102,9 +102,31 @@
        }
       ]
      }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "716076467",
+      "Name": "EnemySoundsSwitch",
+      "ObjectPath": "\\Switches\\Default Work Unit\\EnemySoundsSwitch",
+      "GUID": "{CD49931D-8CBC-4D08-85F4-9DD3AB4BA672}",
+      "Switches": [
+       {
+        "Id": "1516571116",
+        "Name": "Chasing",
+        "ObjectPath": "\\Switches\\Default Work Unit\\EnemySoundsSwitch\\Chasing",
+        "GUID": "{A3D9F161-8E4E-448D-9BDC-CC10D3692C2E}"
+       },
+       {
+        "Id": "1874288895",
+        "Name": "Idle",
+        "ObjectPath": "\\Switches\\Default Work Unit\\EnemySoundsSwitch\\Idle",
+        "GUID": "{915A6B94-0012-488D-B90B-7E26F66B4255}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{D0AAB872-F334-98C4-6A74-D3A9AB6D8646}"
+  "FileHash": "{3F179FDD-1BDC-BF0F-2BC3-1F983DBC4DB2}"
  }
 }

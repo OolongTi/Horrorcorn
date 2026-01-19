@@ -676,6 +676,22 @@ MonoBehaviour:
   slowEmissionRate: 2
   enemyPos1: {fileID: 0}
   enemyPos2: {fileID: 0}
+  enemySoundsEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  idleSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  chaseSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!195 &47526349
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7863,6 +7879,22 @@ MonoBehaviour:
   slowEmissionRate: 2
   enemyPos1: {fileID: 0}
   enemyPos2: {fileID: 0}
+  enemySoundsEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  idleSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  chaseSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!195 &384508342
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -22276,6 +22308,22 @@ MonoBehaviour:
   slowEmissionRate: 2
   enemyPos1: {fileID: 0}
   enemyPos2: {fileID: 0}
+  enemySoundsEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  idleSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  chaseSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!195 &1411371964
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -29395,6 +29443,22 @@ MonoBehaviour:
   slowEmissionRate: 2
   enemyPos1: {fileID: 0}
   enemyPos2: {fileID: 0}
+  enemySoundsEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  idleSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  chaseSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!195 &1688855152
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -35502,6 +35566,22 @@ MonoBehaviour:
   slowEmissionRate: 2
   enemyPos1: {fileID: 0}
   enemyPos2: {fileID: 0}
+  enemySoundsEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  idleSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  chaseSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!195 &1838034520
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -43333,6 +43413,18 @@ PrefabInstance:
       propertyPath: enemyPos2
       value: 
       objectReference: {fileID: 1395737564}
+    - target: {fileID: 318061868741926659, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
+      propertyPath: idleSwitch.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1da280c8050c683478bc852cfbbca32c, type: 2}
+    - target: {fileID: 318061868741926659, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
+      propertyPath: chaseSwitch.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 22f7d1617c8356646960f082196f9004, type: 2}
+    - target: {fileID: 318061868741926659, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
+      propertyPath: enemySoundsEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f332cf3849f50fe45aa0dbbd831c63c7, type: 2}
     - target: {fileID: 735490232162351667, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
       propertyPath: m_Name
       value: Enemies
@@ -43353,6 +43445,18 @@ PrefabInstance:
       propertyPath: enemyPos2
       value: 
       objectReference: {fileID: 1401314467}
+    - target: {fileID: 2515926280575106930, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
+      propertyPath: idleSwitch.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1da280c8050c683478bc852cfbbca32c, type: 2}
+    - target: {fileID: 2515926280575106930, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
+      propertyPath: chaseSwitch.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 22f7d1617c8356646960f082196f9004, type: 2}
+    - target: {fileID: 2515926280575106930, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
+      propertyPath: enemySoundsEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f332cf3849f50fe45aa0dbbd831c63c7, type: 2}
     - target: {fileID: 2782995407438909124, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
       propertyPath: m_LocalPosition.x
       value: -55.14282
@@ -43409,6 +43513,18 @@ PrefabInstance:
       propertyPath: enemyPos2
       value: 
       objectReference: {fileID: 895295883}
+    - target: {fileID: 6294865137664593260, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
+      propertyPath: idleSwitch.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1da280c8050c683478bc852cfbbca32c, type: 2}
+    - target: {fileID: 6294865137664593260, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
+      propertyPath: chaseSwitch.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 22f7d1617c8356646960f082196f9004, type: 2}
+    - target: {fileID: 6294865137664593260, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
+      propertyPath: enemySoundsEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f332cf3849f50fe45aa0dbbd831c63c7, type: 2}
     - target: {fileID: 7839149880136048409, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
       propertyPath: Dust
       value: 
@@ -43425,6 +43541,18 @@ PrefabInstance:
       propertyPath: enemyPos2
       value: 
       objectReference: {fileID: 346942562}
+    - target: {fileID: 7839149880136048409, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
+      propertyPath: idleSwitch.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1da280c8050c683478bc852cfbbca32c, type: 2}
+    - target: {fileID: 7839149880136048409, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
+      propertyPath: chaseSwitch.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 22f7d1617c8356646960f082196f9004, type: 2}
+    - target: {fileID: 7839149880136048409, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
+      propertyPath: enemySoundsEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f332cf3849f50fe45aa0dbbd831c63c7, type: 2}
     - target: {fileID: 8166174084011062529, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
       propertyPath: Dust
       value: 
@@ -43441,7 +43569,20 @@ PrefabInstance:
       propertyPath: enemyPos2
       value: 
       objectReference: {fileID: 330523482}
-    m_RemovedComponents: []
+    - target: {fileID: 8166174084011062529, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
+      propertyPath: idleSwitch.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1da280c8050c683478bc852cfbbca32c, type: 2}
+    - target: {fileID: 8166174084011062529, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
+      propertyPath: chaseSwitch.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 22f7d1617c8356646960f082196f9004, type: 2}
+    - target: {fileID: 8166174084011062529, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
+      propertyPath: enemySoundsEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f332cf3849f50fe45aa0dbbd831c63c7, type: 2}
+    m_RemovedComponents:
+    - {fileID: 8275472747762762612, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4410204918247584544, guid: 50012c6db8c8415418f41a6ca501d751, type: 3}

@@ -6,6 +6,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	3105125657	KeyPickedUp			\Default Work Unit\KeyPickedUp	
 	3818553682	ChurchBells			\Default Work Unit\ChurchBells	
 
+Switch Group	ID	Name			Wwise Object Path	Notes
+	716076467	EnemySoundsSwitch			\Default Work Unit\EnemySoundsSwitch	
+
+Switch	ID	Name	Switch Group			Notes
+	1516571116	Chasing	EnemySoundsSwitch			
+	1874288895	Idle	EnemySoundsSwitch			
+
 State Group	ID	Name			Wwise Object Path	Notes
 	4074543262	GameBackgroundNoiseState			\Default Work Unit\GameBackgroundNoiseState	
 
@@ -25,13 +32,14 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	398961623	731047__moodyfingers__keychain-grabbing_04	.cache\0E\{0ECA9751-DBF8-5F1B-AE84-B4AEE25F1DF4}.wem		\Containers\Default Work Unit\Keys\731047__moodyfingers__keychain-grabbing_04		67024
 	448474463	731047__moodyfingers__keychain-grabbing_02	.cache\00\{0076DD6B-16EB-490B-0A0D-490D7A25722E}.wem		\Containers\Default Work Unit\Keys\731047__moodyfingers__keychain-grabbing_02		82712
 	500718068	731047__moodyfingers__keychain-grabbing_08	.cache\9F\{9FC23140-71DC-836E-062D-A4772F9989C0}.wem		\Containers\Default Work Unit\Keys\731047__moodyfingers__keychain-grabbing_08		72256
-	541101431	zombieWalk	.cache\76\{76E79E3B-1CDD-A5DC-2BD1-42C1FD5E90F9}.wem		\Containers\Default Work Unit\zombieWalk		12764296
+	541101431	zombieWalk	.cache\76\{76E79E3B-1CDD-A5DC-2BD1-42C1FD5E90F9}.wem		\Containers\Default Work Unit\EnemyNoise\zombieWalk		12764296
 	588241039	731047__moodyfingers__keychain-grabbing_07	.cache\15\{15B8C1D1-9494-7553-1D0C-BF62902D001D}.wem		\Containers\Default Work Unit\Keys\731047__moodyfingers__keychain-grabbing_07		72252
 	588941591	731047__moodyfingers__keychain-grabbing_03	.cache\05\{05F35DF9-5690-A211-2F36-8DEEEA2E4973}.wem		\Containers\Default Work Unit\Keys\731047__moodyfingers__keychain-grabbing_03		84804
 	622462580	731047__moodyfingers__keychain-grabbing_09	.cache\C0\{C082C679-7445-B0E7-0A48-3C0ADA948A7D}.wem		\Containers\Default Work Unit\Keys\731047__moodyfingers__keychain-grabbing_09		79572
 	708032726	731047__moodyfingers__keychain-grabbing_01	.cache\A3\{A3B7FE71-5688-BEAB-76A5-1257ACC3F32A}.wem		\Containers\Default Work Unit\Keys\731047__moodyfingers__keychain-grabbing_01		79576
 	730093018	684161__dibko__the-church-bells-ring-twice	.cache\53\{5377B56F-61DD-F2CF-8042-936A6A0B5A61}.wem		\Containers\Default Work Unit\684161__dibko__the-church-bells-ring-twice		1127288
 	743090927	842088__adiantheman__spooky-ambience	.cache\E0\{E0167945-A4E1-28A9-48FF-41EB8E5AB6F9}.wem		\Containers\Default Work Unit\BackgroundNoise\842088__adiantheman__spooky-ambience		5472352
+	784897722	157130__slave2thelight__solo-zombie-8	.cache\08\{0808C621-A76D-BC31-6E46-7191A2EC3917}.wem		\Containers\Default Work Unit\EnemyNoise\157130__slave2thelight__solo-zombie-8		23251068
 	910162288	731047__moodyfingers__keychain-grabbing_06	.cache\E2\{E2AA327B-3D08-8B7C-3188-EC2828B5822C}.wem		\Containers\Default Work Unit\Keys\731047__moodyfingers__keychain-grabbing_06		71208
 	949727889	FootstepsWalking	.cache\62\{62CC9348-4DDC-08F3-1505-E42A9604EAA0}.wem		\Containers\Default Work Unit\PlayerWalkBlend\FootstepsWalking		2189636
 	959806527	BackgroundSound	.cache\0F\{0FF412F8-357F-34DF-3356-41F4006E6CF4}.wem		\Containers\Default Work Unit\BackgroundNoise\BackgroundSound		27362232

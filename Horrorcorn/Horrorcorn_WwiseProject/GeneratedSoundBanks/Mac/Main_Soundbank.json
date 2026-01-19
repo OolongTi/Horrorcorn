@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{B2AEE5B6-EB08-4297-960C-9A429FE53F43}",
     "Language": "SFX",
-    "Hash": "{6505A7BC-2A01-65D3-E6E0-FD4118B6F344}",
+    "Hash": "{13237C2B-0F1F-5CB8-7E15-8A9B75421F9A}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main_Soundbank",
     "ShortName": "Main_Soundbank",
     "Path": "Main_Soundbank.bnk",
@@ -128,6 +128,14 @@
       "CachePath": "E0/{E0167945-A4E1-28A9-48FF-41EB8E5AB6F9}.wem"
      },
      {
+      "Id": "784897722",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "157130__slave2thelight__solo-zombie-8.wav",
+      "CachePath": "08/{0808C621-A76D-BC31-6E46-7191A2EC3917}.wem"
+     },
+     {
       "Id": "910162288",
       "Language": "SFX",
       "Streaming": "false",
@@ -175,9 +183,33 @@
       "GUID": "{4A75E30F-1875-48B1-9D3A-C58742B6F8D6}",
       "MaxAttenuation": "100",
       "DurationType": "Infinite",
-      "MediaRefs": [
+      "SwitchContainers": [
        {
-        "Id": "541101431"
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "716076467",
+         "Id": "1516571116",
+         "GUID": "{A3D9F161-8E4E-448D-9BDC-CC10D3692C2E}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "784897722"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "716076467",
+         "Id": "1874288895",
+         "GUID": "{915A6B94-0012-488D-B90B-7E26F66B4255}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "541101431"
+         }
+        ]
        }
       ]
      },
@@ -187,8 +219,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\KeyPickedUp",
       "GUID": "{7D35D158-F88F-4714-A4E4-2A6DE081F8E7}",
       "DurationType": "OneShot",
-      "DurationMin": "0.3521477",
-      "DurationMax": "0.69955266",
+      "DurationMin": "0.33238316",
+      "DurationMax": "0.74115026",
       "MediaRefs": [
        {
         "Id": "245338401"
@@ -337,9 +369,31 @@
        }
       ]
      }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "716076467",
+      "Name": "EnemySoundsSwitch",
+      "ObjectPath": "\\Switches\\Default Work Unit\\EnemySoundsSwitch",
+      "GUID": "{CD49931D-8CBC-4D08-85F4-9DD3AB4BA672}",
+      "Switches": [
+       {
+        "Id": "1516571116",
+        "Name": "Chasing",
+        "ObjectPath": "\\Switches\\Default Work Unit\\EnemySoundsSwitch\\Chasing",
+        "GUID": "{A3D9F161-8E4E-448D-9BDC-CC10D3692C2E}"
+       },
+       {
+        "Id": "1874288895",
+        "Name": "Idle",
+        "ObjectPath": "\\Switches\\Default Work Unit\\EnemySoundsSwitch\\Idle",
+        "GUID": "{915A6B94-0012-488D-B90B-7E26F66B4255}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{C09FA4B1-202F-8353-04ED-FD04D147C564}"
+  "FileHash": "{CF167AF3-26B2-165B-0D23-96EDEEACA127}"
  }
 }

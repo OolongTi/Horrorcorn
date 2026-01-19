@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4355c2202116b44b9a9105fc4e5426e, type: 3}
+  m_Name: CD49931D-8CBC-4D08-85F4-9DD3AB4BA672
+  m_EditorClassIdentifier: 
+  objectName: EnemySoundsSwitch
+  id: 716076467
+  guid: CD49931D-8CBC-4D08-85F4-9DD3AB4BA672

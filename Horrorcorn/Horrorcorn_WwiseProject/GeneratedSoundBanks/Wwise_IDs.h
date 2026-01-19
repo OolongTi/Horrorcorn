@@ -37,6 +37,21 @@ namespace AK
 
     } // namespace STATES
 
+    namespace SWITCHES
+    {
+        namespace ENEMYSOUNDSSWITCH
+        {
+            static const AkUniqueID GROUP = 716076467U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID CHASING = 1516571116U;
+                static const AkUniqueID IDLE = 1874288895U;
+            } // namespace SWITCH
+        } // namespace ENEMYSOUNDSSWITCH
+
+    } // namespace SWITCHES
+
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID PLAYERSPEED = 1493153371U;

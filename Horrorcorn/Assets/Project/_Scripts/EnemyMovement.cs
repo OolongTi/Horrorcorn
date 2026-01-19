@@ -33,9 +33,11 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Transform enemyPos1;
     [SerializeField] private Transform enemyPos2;
     private bool goingToPos1 = false;
-    private bool reachedIdleDestination = false; 
+    private bool reachedIdleDestination = false;
 
-    
+    [SerializeField] private AK.Wwise.Event enemySoundsEvent;
+    [SerializeField] private AK.Wwise.Switch idleSwitch;
+    [SerializeField] private AK.Wwise.Switch chaseSwitch;
 
     private void Awake()
     {
@@ -49,11 +51,17 @@ public class EnemyMovement : MonoBehaviour
             hasEmission = true;
         }
     }
-    
+
+    private void Start()
+    {
+        enemySoundsEvent.Post(gameObject);
+    }
+
     public void PlayerSighted()
     {
         if (!following)
         {
+            chaseSwitch.SetValue(gameObject);
             agent.speed = 5f;
             followCoroutine = StartCoroutine(FollowTarget());
             following = true;
@@ -64,6 +72,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (following)
         {
+            idleSwitch.SetValue(gameObject);
             StopCoroutine(followCoroutine);
 
             if (target != null)
