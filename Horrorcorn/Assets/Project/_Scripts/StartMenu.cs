@@ -66,8 +66,8 @@ public class StartMenu : MonoBehaviour
         MenuClosed?.Invoke();
         PlayerCamera.LockCursor();
         
-       string playerName = nameField.text;
-       PlayerName = playerName;
+        //string playerName = nameField.text;
+        //PlayerName = playerName;
         gameObject.SetActive(false);
     }
     
