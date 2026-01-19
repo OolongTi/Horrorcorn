@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{B2AEE5B6-EB08-4297-960C-9A429FE53F43}",
     "Language": "SFX",
-    "Hash": "{7B05E7B1-1916-31BA-47DA-A8433A50E3B4}",
+    "Hash": "{6505A7BC-2A01-65D3-E6E0-FD4118B6F344}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main_Soundbank",
     "ShortName": "Main_Soundbank",
     "Path": "Main_Soundbank.bnk",
@@ -117,7 +117,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "684161__dibko__the-church-bells-ring-twice.wav",
-      "CachePath": "D7/{D7826D81-AF78-E8D4-61EB-A649FDC1640E}.wem"
+      "CachePath": "53/{5377B56F-61DD-F2CF-8042-936A6A0B5A61}.wem"
      },
      {
       "Id": "743090927",
@@ -340,6 +340,6 @@
     ]
    }
   ],
-  "FileHash": "{77D1DE7D-20B6-2682-C971-62A655E7D9DB}"
+  "FileHash": "{C09FA4B1-202F-8353-04ED-FD04D147C564}"
  }
 }

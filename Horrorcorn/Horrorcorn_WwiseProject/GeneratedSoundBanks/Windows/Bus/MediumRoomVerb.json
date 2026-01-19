@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "4091100022",
+    "Type": "Bus",
+    "GUID": "{E6D82AA1-A6CA-4BFC-A66F-64FE46F40E44}",
+    "Language": "SFX",
+    "Hash": "{E3F285C0-483D-80CD-7148-79C9A1F27B5F}",
+    "ObjectPath": "MediumRoomVerb",
+    "ShortName": "MediumRoomVerb",
+    "Path": "Bus/MediumRoomVerb.bnk",
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "AuxBusses": [
+     {
+      "Id": "4091100022",
+      "Name": "MediumRoomVerb",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\MediumRoomVerb",
+      "GUID": "{E6D82AA1-A6CA-4BFC-A66F-64FE46F40E44}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{11CDC9B6-AB5A-B0BE-576C-B0515137F32D}"
+ }
+}

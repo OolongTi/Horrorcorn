@@ -30,7 +30,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	588941591	731047__moodyfingers__keychain-grabbing_03	.cache\05\{05F35DF9-5690-A211-2F36-8DEEEA2E4973}.wem		\Containers\Default Work Unit\Keys\731047__moodyfingers__keychain-grabbing_03		84804
 	622462580	731047__moodyfingers__keychain-grabbing_09	.cache\C0\{C082C679-7445-B0E7-0A48-3C0ADA948A7D}.wem		\Containers\Default Work Unit\Keys\731047__moodyfingers__keychain-grabbing_09		79572
 	708032726	731047__moodyfingers__keychain-grabbing_01	.cache\A3\{A3B7FE71-5688-BEAB-76A5-1257ACC3F32A}.wem		\Containers\Default Work Unit\Keys\731047__moodyfingers__keychain-grabbing_01		79576
-	730093018	684161__dibko__the-church-bells-ring-twice	.cache\D7\{D7826D81-AF78-E8D4-61EB-A649FDC1640E}.wem		\Containers\Default Work Unit\684161__dibko__the-church-bells-ring-twice		1127288
+	730093018	684161__dibko__the-church-bells-ring-twice	.cache\53\{5377B56F-61DD-F2CF-8042-936A6A0B5A61}.wem		\Containers\Default Work Unit\684161__dibko__the-church-bells-ring-twice		1127288
 	743090927	842088__adiantheman__spooky-ambience	.cache\E0\{E0167945-A4E1-28A9-48FF-41EB8E5AB6F9}.wem		\Containers\Default Work Unit\BackgroundNoise\842088__adiantheman__spooky-ambience		5472352
 	910162288	731047__moodyfingers__keychain-grabbing_06	.cache\E2\{E2AA327B-3D08-8B7C-3188-EC2828B5822C}.wem		\Containers\Default Work Unit\Keys\731047__moodyfingers__keychain-grabbing_06		71208
 	949727889	FootstepsWalking	.cache\62\{62CC9348-4DDC-08F3-1505-E42A9604EAA0}.wem		\Containers\Default Work Unit\PlayerWalkBlend\FootstepsWalking		2189636
