@@ -7,7 +7,7 @@ public class Timer : MonoBehaviour
     public float time = 0;
     private int secondsTime = 0;
     [SerializeField] public TextMeshProUGUI timerText;
-    public static event Action<float> giveTimerEvent;
+
     
     private void Start()
     {
@@ -23,7 +23,7 @@ public class Timer : MonoBehaviour
 
     private void giveTimer(string obj)
     {
-        giveTimerEvent?.Invoke(time);
+
     }
 
     private void OnDestroy()
