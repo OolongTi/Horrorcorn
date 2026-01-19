@@ -20,7 +20,7 @@
 								<MediaID ID="727205140"/>
 							</MediaIDList>
 						</AudioFileSource>
-						<AudioFileSource Name="322604__lxx70__scary-night-base-layer" ID="{08850EDF-12E7-44E9-965F-66BA21817626}">
+						<AudioFileSource Name="322604__lxx70__scary-night-base-layer_01" ID="{08850EDF-12E7-44E9-965F-66BA21817626}">
 							<Language>SFX</Language>
 							<AudioFile>322604__lxx70__scary-night-base-layer.wav</AudioFile>
 							<MediaIDList>
@@ -29,7 +29,7 @@
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="322604__lxx70__scary-night-base-layer" ID="{08850EDF-12E7-44E9-965F-66BA21817626}" Platform="Linked"/>
+						<ActiveSource Name="322604__lxx70__scary-night-base-layer_01" ID="{08850EDF-12E7-44E9-965F-66BA21817626}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="543806__nox_sound__footsteps_mountain_boots_gritty_ground_stones_pebbles_mono" ID="{32F7380B-6731-43B2-910F-435D682E0EED}" ShortID="172110759">
@@ -54,70 +54,7 @@
 						<ActiveSource Name="543806__nox_sound__footsteps_mountain_boots_gritty_ground_stones_pebbles_mono" ID="{B78F1971-59E1-409E-B26D-7F8F8777A742}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="842088__adiantheman__spooky-ambience" ID="{A7F826DD-7675-4956-8B67-E67150428AAD}" ShortID="745223470">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="842088__adiantheman__spooky-ambience" ID="{458CD7BB-5025-46D1-A7C3-FE55AB45DDF8}">
-							<Language>SFX</Language>
-							<AudioFile>842088__adiantheman__spooky-ambience.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="743090927"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="842088__adiantheman__spooky-ambience" ID="{458CD7BB-5025-46D1-A7C3-FE55AB45DDF8}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Folder Name="EditedFiles" ID="{07525DB3-8740-457F-9892-C61CFAA45589}" ShortID="557612171">
-					<ChildrenList>
-						<Sound Name="BackgroundSound" ID="{DB02A602-1E81-4412-AE2F-C7F1DE1CB1AC}" ShortID="372900354">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="322604__lxx70__scary-night-base-layer_01" ID="{FBBAAA49-5EE5-4D66-8575-B7A50178A6DB}">
-									<Language>SFX</Language>
-									<AudioFile>322604__lxx70__scary-night-base-layer.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="270985122"/>
-									</MediaIDList>
-								</AudioFileSource>
-								<AudioFileSource Name="322604__lxx70__scary-night-base-layer" ID="{0C164207-572E-4F7B-82F0-281B5FA20D49}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="4.35714037375221"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="2.1785701868761"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="155.114172808475"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>322604__lxx70__scary-night-base-layer.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="959806527"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="322604__lxx70__scary-night-base-layer" ID="{0C164207-572E-4F7B-82F0-281B5FA20D49}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</Folder>
+				<Folder Name="EditedFiles" ID="{07525DB3-8740-457F-9892-C61CFAA45589}" ShortID="557612171"/>
 				<Sound Name="zombieWalk" ID="{FBA3600B-C71B-4CF3-92CB-12BEBF67E809}" ShortID="1024342232">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
@@ -622,6 +559,152 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<SwitchContainer Name="BackgroundNoise" ID="{72BF65DD-DDBB-457C-9E31-88FA8C53F9D9}" ShortID="1006649764">
+					<PropertyList>
+						<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="Menu" ID="{C45F37F5-26D4-4CAE-8E16-B5CE05C83A8E}" WorkUnitID="{772348E7-62A0-4B3C-A9D6-4A0BB800F435}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="GameBackgroundNoiseState" ID="{ADF65763-5248-43E6-A2A6-A12D96A9D334}" WorkUnitID="{772348E7-62A0-4B3C-A9D6-4A0BB800F435}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="BackgroundSound" ID="{DB02A602-1E81-4412-AE2F-C7F1DE1CB1AC}" ShortID="372900354">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="322604__lxx70__scary-night-base-layer" ID="{0C164207-572E-4F7B-82F0-281B5FA20D49}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="4.35714037375221"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.1785701868761"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="155.114172808475"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>322604__lxx70__scary-night-base-layer.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="959806527"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="322604__lxx70__scary-night-base-layer" ID="{0C164207-572E-4F7B-82F0-281B5FA20D49}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="842088__adiantheman__spooky-ambience" ID="{A7F826DD-7675-4956-8B67-E67150428AAD}" ShortID="745223470">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="842088__adiantheman__spooky-ambience" ID="{458CD7BB-5025-46D1-A7C3-FE55AB45DDF8}">
+									<Language>SFX</Language>
+									<AudioFile>842088__adiantheman__spooky-ambience.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="743090927"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="842088__adiantheman__spooky-ambience" ID="{458CD7BB-5025-46D1-A7C3-FE55AB45DDF8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="BackgroundSound" ID="{DB02A602-1E81-4412-AE2F-C7F1DE1CB1AC}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="842088__adiantheman__spooky-ambience" ID="{A7F826DD-7675-4956-8B67-E67150428AAD}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="None" ID="{BEE7FDC4-4711-42FF-A5A9-4EB166003EC6}"/>
+								<ItemList>
+									<ItemRef Name="842088__adiantheman__spooky-ambience" ID="{A7F826DD-7675-4956-8B67-E67150428AAD}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Game" ID="{C04E7DCF-C93C-4B37-86A8-070ED73BF400}"/>
+								<ItemList>
+									<ItemRef Name="BackgroundSound" ID="{DB02A602-1E81-4412-AE2F-C7F1DE1CB1AC}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Menu" ID="{C45F37F5-26D4-4CAE-8E16-B5CE05C83A8E}"/>
+								<ItemList>
+									<ItemRef Name="842088__adiantheman__spooky-ambience" ID="{A7F826DD-7675-4956-8B67-E67150428AAD}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+				<Sound Name="684161__dibko__the-church-bells-ring-twice" ID="{8E8B6D4E-FA37-4BF4-856D-FA4FF38AFC3A}" ShortID="56018044">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="BellsAttenuatuation" ID="{F1C1F5F9-77A0-4033-B133-E94827180634}" WorkUnitID="{D5871CE0-797B-455D-83DC-A1BA358E362E}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0966EB8-44F4-43CB-91A4-1A1EF22BB2D9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{75C0E266-2BF4-4483-AE16-8F86709A73EE}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="684161__dibko__the-church-bells-ring-twice" ID="{36591A11-4064-4536-87D8-FD6BF4B619F0}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.0741787679952468"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="1.89685706730702"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="6.38997061135269"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>684161__dibko__the-church-bells-ring-twice.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="730093018"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="684161__dibko__the-church-bells-ring-twice" ID="{36591A11-4064-4536-87D8-FD6BF4B619F0}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

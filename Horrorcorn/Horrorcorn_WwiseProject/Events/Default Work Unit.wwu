@@ -5,10 +5,10 @@
 			<ChildrenList>
 				<Event Name="Play_BackgroundAmbience" ID="{0AC1DC95-F513-4A2E-BBD8-14672A02EBD2}">
 					<ChildrenList>
-						<Action Name="" ID="{CC9B6291-A6CF-4D07-AE17-2BF627C4AA84}" ShortID="21799945">
+						<Action Name="" ID="{21C113C7-3229-422F-96DB-E6E3A20682A1}" ShortID="993156858">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="BackgroundSound" ID="{DB02A602-1E81-4412-AE2F-C7F1DE1CB1AC}" WorkUnitID="{1822CDDD-4C24-41B4-81B5-AF994A18438B}"/>
+									<ObjectRef Name="BackgroundNoise" ID="{72BF65DD-DDBB-457C-9E31-88FA8C53F9D9}" WorkUnitID="{1822CDDD-4C24-41B4-81B5-AF994A18438B}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -53,6 +53,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Keys" ID="{261BED1A-D6FC-4595-8CE5-E325FAA01871}" WorkUnitID="{1822CDDD-4C24-41B4-81B5-AF994A18438B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ChurchBells" ID="{47EB6C50-DC9F-468E-8C41-814035667DFE}">
+					<ChildrenList>
+						<Action Name="" ID="{137B7E79-3C69-44D1-8BD3-EC7231821970}" ShortID="1065395544">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="684161__dibko__the-church-bells-ring-twice" ID="{8E8B6D4E-FA37-4BF4-856D-FA4FF38AFC3A}" WorkUnitID="{1822CDDD-4C24-41B4-81B5-AF994A18438B}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

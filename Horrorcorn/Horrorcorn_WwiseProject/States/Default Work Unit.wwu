@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{772348E7-62A0-4B3C-A9D6-4A0BB800F435}" SchemaVersion="133">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{772348E7-62A0-4B3C-A9D6-4A0BB800F435}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{772348E7-62A0-4B3C-A9D6-4A0BB800F435}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="GameBackgroundNoiseState" ID="{ADF65763-5248-43E6-A2A6-A12D96A9D334}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="2"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{BEE7FDC4-4711-42FF-A5A9-4EB166003EC6}"/>
+						<State Name="Game" ID="{C04E7DCF-C93C-4B37-86A8-070ED73BF400}"/>
+						<State Name="Menu" ID="{C45F37F5-26D4-4CAE-8E16-B5CE05C83A8E}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>
