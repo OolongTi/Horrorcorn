@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     
     void OnDestroy()
     {
+        speedRtpc.SetValue(gameObject, 0);
         PickupSensor.PickupCollected -= PickedUp;
     }
 
@@ -199,4 +200,6 @@ public class PlayerController : MonoBehaviour
     {
         return (value - fromSource) * (toTarget - fromTarget) / (toSource - fromSource) + fromTarget;
     }
+
+
 }

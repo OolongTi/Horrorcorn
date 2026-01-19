@@ -13,12 +13,29 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID CHURCHBELLS = 3818553682U;
         static const AkUniqueID ENEMYWALK = 1103958200U;
         static const AkUniqueID KEYPICKEDUP = 3105125657U;
         static const AkUniqueID PLAY_BACKGROUNDAMBIENCE = 1952464646U;
         static const AkUniqueID PLAYERWALKANDRUN = 2539379111U;
         static const AkUniqueID TESTEVENT = 1097980931U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace GAMEBACKGROUNDNOISESTATE
+        {
+            static const AkUniqueID GROUP = 4074543262U;
+
+            namespace STATE
+            {
+                static const AkUniqueID GAME = 702482391U;
+                static const AkUniqueID MENU = 2607556080U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace GAMEBACKGROUNDNOISESTATE
+
+    } // namespace STATES
 
     namespace GAME_PARAMETERS
     {

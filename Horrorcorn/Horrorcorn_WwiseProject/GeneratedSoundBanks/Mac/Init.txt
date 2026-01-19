@@ -1,3 +1,11 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	4074543262	GameBackgroundNoiseState			\Default Work Unit\GameBackgroundNoiseState	
+
+State	ID	Name	State Group			Notes
+	702482391	Game	GameBackgroundNoiseState			
+	748895195	None	GameBackgroundNoiseState			
+	2607556080	Menu	GameBackgroundNoiseState			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	2246998526	Main Audio Bus			\Default Work Unit\Main Audio Bus	
 
