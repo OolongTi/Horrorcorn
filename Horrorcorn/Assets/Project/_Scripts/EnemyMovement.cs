@@ -21,6 +21,9 @@ public class EnemyMovement : MonoBehaviour
     private EnemyAnimation animation;
 
     public ParticleSystem Dust;
+    private ParticleSystem.EmissionModule emission;
+    private bool hasEmission;
+    
     
     public float fastEmissionRate = 10f; 
     public float slowEmissionRate = 3f;
@@ -30,13 +33,21 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Transform enemyPos1;
     [SerializeField] private Transform enemyPos2;
     private bool goingToPos1 = false;
-    private bool reachedIdleDestination = false;
+    private bool reachedIdleDestination = false; 
+
     
 
     private void Awake()
     {
+        
         agent = GetComponent<NavMeshAgent>();
         animation = GetComponentInChildren<EnemyAnimation>();
+        
+        if (Dust != null)
+        {
+            emission = Dust.emission;
+            hasEmission = true;
+        }
     }
     
     public void PlayerSighted()
@@ -65,53 +76,48 @@ public class EnemyMovement : MonoBehaviour
     
     private void IdleWalkTo1()
     {
+        var emission = Dust.emission;
 
         agent.SetDestination(enemyPos1.transform.position);
         animation.IdleWalk();
+        if (hasEmission)
+        {
+            emission.rateOverTime = slowEmissionRate;
+        }
     }
     private void IdleWalkTo2()
     {
 
         agent.SetDestination(enemyPos2.transform.position);
         animation.IdleWalk();
+        if (hasEmission)
+        {
+            emission.rateOverTime = slowEmissionRate;
+        }
     }
     
 
     void Update()
     {
-        /*
-        var emission = Dust.emission;
-        bool isMoving = agent.velocity.magnitude > 0.1f;
-        
 
-
-        if (isMoving)
-        {
-            if (following)
-            {
-                emission.rateOverTime = fastEmissionRate;
-            }
-            else
-            {
-                emission.rateOverTime = slowEmissionRate;
-            }
-        }
-        else
-        {
-            emission.rateOverTime = 0f;
-        }
-        */
-        
         if(!following && hasReachedDestination)
         {
             agent.speed = 2f;
             if (goingToPos1 && reachedIdleDestination)
             {
                 IdleWalkTo1();
+                if (hasEmission)
+                {
+                    emission.rateOverTime = slowEmissionRate;
+                }
             }
             else if (!goingToPos1 && reachedIdleDestination)
             {
                 IdleWalkTo2();
+                if (hasEmission)
+                {
+                    emission.rateOverTime = slowEmissionRate;
+                }
             }
             
             float idleDistance = Vector3.Distance(transform.position, agent.destination);
@@ -150,6 +156,10 @@ public class EnemyMovement : MonoBehaviour
         while (true)
         {
             agent.SetDestination(target.transform.position);
+            if (hasEmission)
+            {
+                emission.rateOverTime = fastEmissionRate;
+            }
             
             yield return wait;
         }
