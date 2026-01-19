@@ -8,7 +8,11 @@ public class StartMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI WinOrLoseText;
     private static string PreviousEndMessage = "";
 
+    [SerializeField] private TimeManager timeManager;
+    [SerializeField] private TMPro.TMP_InputField nameField;
+
     public static StartMenu instance;
+    public string PlayerName = "";
 
     public static event Action MenuOpen;
     public static event Action MenuClosed;
@@ -61,6 +65,9 @@ public class StartMenu : MonoBehaviour
     {
         MenuClosed?.Invoke();
         PlayerCamera.LockCursor();
+        
+       string playerName = nameField.text;
+       PlayerName = playerName;
         gameObject.SetActive(false);
     }
     

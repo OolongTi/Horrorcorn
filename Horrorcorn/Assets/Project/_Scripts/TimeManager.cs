@@ -8,6 +8,8 @@ public class TimeManager
     
     private static float timeScale = 1f;
 
+
+
     public static void SetPause(GameObject obj)
     {
         pauseStack.Add(obj);

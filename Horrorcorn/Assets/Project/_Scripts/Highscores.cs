@@ -1,6 +1,6 @@
-/*using System.Collections.Generic;
+using System.Collections.Generic;
 using System.IO;
-using Unity.Plastic.Newtonsoft.Json;
+using Newtonsoft.Json;
 using UnityEngine;
 
 public class HighScores
@@ -12,7 +12,7 @@ public class HighScores
 
         public override string ToString()
         {
-            return $"{Name}: {Score}";
+            return $"{Name}: {Timer.timerText.text}";
         }
     }
     
@@ -65,4 +65,4 @@ public class HighScores
         }
         return result;
     }
-}*/
+}

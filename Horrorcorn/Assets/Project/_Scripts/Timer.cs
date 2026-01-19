@@ -5,7 +5,7 @@ public class Timer : MonoBehaviour
 {
     public float time = 0;
     private int secondsTime = 0;
-    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] public static TextMeshProUGUI timerText;
     
     void Update()
     {
