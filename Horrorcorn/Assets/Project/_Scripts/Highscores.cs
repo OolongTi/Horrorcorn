@@ -1,4 +1,4 @@
-/*
+
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
@@ -10,12 +10,12 @@ public class HighScores
     
     public class Entry
     {
-        public string Name;
-        public int Score;
+        public string PlayerName;
+        public float time;
 
         public override string ToString()
         {
-            return $"{Name}: {time}";
+            return $"{PlayerName}: {time:F1}s";
         }
     }
     
@@ -43,12 +43,21 @@ public class HighScores
             string json = File.ReadAllText(path);
             entries = JsonConvert.DeserializeObject<List<Entry>>(json);
         }
-        
+        FillEmptySlots();
     }
     
-    public void AddEntry(string name, int score)
+    private void FillEmptySlots()
     {
-        var entry = new Entry(){Name = name, Score = score};
+        while (entries.Count < 5)
+        {
+            entries.Add(new Entry { PlayerName = "Dude", time = 50.0f });
+        }
+    }
+    
+    public void AddEntry(string name, float score)
+    {
+        if (string.IsNullOrEmpty(name)) name = "Unknown";
+        var entry = new Entry(){PlayerName = name, time = score};
         entries.Add(entry);
         Sort();
         Save();
@@ -56,17 +65,16 @@ public class HighScores
 
     private void Sort()
     {
-        entries.Sort((entryA, entryB) => { return entryA.Score.CompareTo(entryB.Score); });
+        entries.Sort((entryA, entryB) => { return entryA.time.CompareTo(entryB.time); });
     }
 
     public override string ToString()
     {
-        string result = "";
-        foreach (Entry entry in entries)
+        string result = "Highscores:\n";
+        for (int i = 0; i < 5; i++)
         {
-            result += entry.ToString() + "\n";
+            result += $"{i + 1}. {entries[i]}\n";
         }
         return result;
     }
 }
-*/

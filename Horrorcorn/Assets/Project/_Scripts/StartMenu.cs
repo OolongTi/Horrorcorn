@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class StartMenu : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI WinOrLoseText;
@@ -10,6 +11,7 @@ public class StartMenu : MonoBehaviour
 
     [SerializeField] private TimeManager timeManager;
     [SerializeField] private TMPro.TMP_InputField nameField;
+    [SerializeField] private TextMeshProUGUI highscoreDisplayField;
 
     public static StartMenu instance;
     public string PlayerName = "";
@@ -52,22 +54,34 @@ public class StartMenu : MonoBehaviour
     
     void OnEnable()
     {
-        
         TimeManager.SetPause(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     void OnDisable()
     {
         TimeManager.RemovePause(gameObject);
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        GameObject canvas = GameObject.Find("Canvas");
+        if (canvas != null)
+        {
+            WinOrLoseText = canvas.transform.Find("WinOrLoseText")?.GetComponent<TextMeshProUGUI>();
+            highscoreDisplayField = canvas.transform.Find("HighscoreField")?.GetComponent<TextMeshProUGUI>();
+            nameField = canvas.transform.Find("NameField")?.GetComponent<TMP_InputField>();
+        }
+    
+        UpdateHighscoreDisplay();
     }
 
     public void StartClicked()
     {
+        PlayerName = nameField.text;
         MenuClosed?.Invoke();
         PlayerCamera.LockCursor();
-        
-        //string playerName = nameField.text;
-        //PlayerName = playerName;
         gameObject.SetActive(false);
     }
     
@@ -82,6 +96,14 @@ public class StartMenu : MonoBehaviour
         TimeManager.SetPause(gameObject);
         PlayerCamera.UnlockCursor();
         PreviousEndMessage = message;
+        
+        HighScores highscores = new HighScores();
+        Timer currentTimer = FindObjectOfType<Timer>();
+        if (currentTimer != null)
+        {
+            highscores.AddEntry(PlayerName, currentTimer.time);
+        }
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         WinOrLoseText.text = "";
         gameObject.SetActive(true);
@@ -91,5 +113,12 @@ public class StartMenu : MonoBehaviour
     {
         Keys.WinEvent -= EnableEndMenu;
         EnemyKillScript.LooseEvent -= EnableEndMenu;
+    }
+    
+    public void UpdateHighscoreDisplay()
+    {
+        HighScores hs = new HighScores();
+        if (highscoreDisplayField != null)
+            highscoreDisplayField.text = hs.ToString();
     }
 }

@@ -6,7 +6,7 @@ public class Timer : MonoBehaviour
 {
     public float time = 0;
     private int secondsTime = 0;
-    [SerializeField] public TextMeshProUGUI timerText;
+    public TextMeshProUGUI timerText;
 
     
     private void Start()
@@ -16,6 +16,12 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
+        
+        if (timerText == null) 
+        {
+            return; 
+        }
+        
         time += Time.deltaTime;
         secondsTime = (int)time;
         timerText.text = $"Time: {secondsTime}";
