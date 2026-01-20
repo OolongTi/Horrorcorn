@@ -14,23 +14,12 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="TestEvent" ID="{2A2E3277-E1AE-48D1-8DDA-AA5F1CC64BA5}">
-					<ChildrenList>
-						<Action Name="" ID="{B36DC0CC-F29C-4898-BDDD-F283E44E94F4}" ShortID="892293990">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="FootstepsWalking" ID="{35C3016D-3005-4D6D-AD03-0909319485D7}" WorkUnitID="{1822CDDD-4C24-41B4-81B5-AF994A18438B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="EnemyWalk" ID="{4A75E30F-1875-48B1-9D3A-C58742B6F8D6}">
 					<ChildrenList>
-						<Action Name="" ID="{AC908F40-8941-40E4-AF4E-F5275ECBFEE5}" ShortID="230040871">
+						<Action Name="" ID="{1BC3367C-CEC0-4713-ACEA-7CB53CC41972}" ShortID="42628348">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="zombieWalk" ID="{FBA3600B-C71B-4CF3-92CB-12BEBF67E809}" WorkUnitID="{1822CDDD-4C24-41B4-81B5-AF994A18438B}"/>
+									<ObjectRef Name="EnemyNoise" ID="{D4BF5D53-61DB-4D8C-87D0-459D1D1CDBAB}" WorkUnitID="{1822CDDD-4C24-41B4-81B5-AF994A18438B}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

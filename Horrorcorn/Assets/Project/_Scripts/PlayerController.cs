@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
     private CharacterController characterController;
 
     [SerializeField] private AK.Wwise.RTPC speedRtpc;
+    private float speedForSound;
+    [SerializeField] private AK.Wwise.Event jumpEvent;
 
     private void Start()
     {
@@ -126,8 +128,11 @@ public class PlayerController : MonoBehaviour
                     jumpSpeed = 0;
                     Stamina = 0;
                     StaminaBar.fillAmount = Stamina / MaxStamina;
+                    jumpEvent.Post(gameObject);
                 }
             }
+            
+            // Overcharge Logic
             else if (Stamina >= MaxStamina)
             {
                 if (Input.GetKey(KeyCode.Space))
@@ -146,6 +151,7 @@ public class PlayerController : MonoBehaviour
                     jumpSpeed = 0;
                     Stamina = 0;
                     OverchargeBar.fillAmount = 0f;
+                    jumpEvent.Post(gameObject);
                 }
             }
         }
@@ -158,7 +164,9 @@ public class PlayerController : MonoBehaviour
                 OverchargeBar.fillAmount = 0f;
             }
         }
-
+        
+        
+        // Sprinting Logic
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             isSprinting = true;
@@ -180,7 +188,11 @@ public class PlayerController : MonoBehaviour
         movementVector *= speed;
         movementVector.y = yVelocity;
         
-        speedRtpc.SetValue(gameObject, speed);
+        
+        speedForSound = speed;
+        if (!characterController.isGrounded) speedForSound = 0;
+        
+        speedRtpc.SetValue(gameObject, speedForSound);
         characterController.Move(movementVector * Time.deltaTime);
     }
     

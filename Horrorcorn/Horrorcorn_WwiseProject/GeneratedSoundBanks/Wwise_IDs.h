@@ -15,10 +15,12 @@ namespace AK
     {
         static const AkUniqueID CHURCHBELLS = 3818553682U;
         static const AkUniqueID ENEMYWALK = 1103958200U;
+        static const AkUniqueID JUMPEVENT = 2018074403U;
         static const AkUniqueID KEYPICKEDUP = 3105125657U;
+        static const AkUniqueID LOSTEVENT = 1924872261U;
         static const AkUniqueID PLAY_BACKGROUNDAMBIENCE = 1952464646U;
         static const AkUniqueID PLAYERWALKANDRUN = 2539379111U;
-        static const AkUniqueID TESTEVENT = 1097980931U;
+        static const AkUniqueID WINEVENT = 2151630775U;
     } // namespace EVENTS
 
     namespace STATES

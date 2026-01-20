@@ -10,11 +10,27 @@
     "Type": "User",
     "GUID": "{B2AEE5B6-EB08-4297-960C-9A429FE53F43}",
     "Language": "SFX",
-    "Hash": "{13237C2B-0F1F-5CB8-7E15-8A9B75421F9A}",
+    "Hash": "{77268C7D-4FF3-4342-A946-89739BBACD03}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main_Soundbank",
     "ShortName": "Main_Soundbank",
     "Path": "Main_Soundbank.bnk",
     "Media": [
+     {
+      "Id": "15211267",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "636720__ulrich_wehner__horror-stinger-3_dont-turn-around.wav",
+      "CachePath": "63/{63015836-98B3-C1B1-7E59-1ED7CEBEBE55}.wem"
+     },
+     {
+      "Id": "241685188",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "510903__lydmakeren__horse_neighing.wav",
+      "CachePath": "EE/{EE935FC0-A213-D39C-DE1E-86743F1DC6BC}.wem"
+     },
      {
       "Id": "245338401",
       "Language": "SFX",
@@ -133,7 +149,15 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "157130__slave2thelight__solo-zombie-8.wav",
-      "CachePath": "08/{0808C621-A76D-BC31-6E46-7191A2EC3917}.wem"
+      "CachePath": "11/{11CC0449-83C7-8FCE-D7E5-F36418564E30}.wem"
+     },
+     {
+      "Id": "884762643",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "127196__davedes__fast-simple-chop-1.wav",
+      "CachePath": "A6/{A6F3083E-94C3-D7F0-B63E-CAE7B70E0C30}.wem"
      },
      {
       "Id": "910162288",
@@ -214,6 +238,20 @@
       ]
      },
      {
+      "Id": "2018074403",
+      "Name": "JumpEvent",
+      "ObjectPath": "\\Events\\Default Work Unit\\JumpEvent",
+      "GUID": "{52DE59CE-2916-4310-BB6F-8BED228A37EF}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.4099526",
+      "DurationMax": "0.4099526",
+      "MediaRefs": [
+       {
+        "Id": "884762643"
+       }
+      ]
+     },
+     {
       "Id": "3105125657",
       "Name": "KeyPickedUp",
       "ObjectPath": "\\Events\\Default Work Unit\\KeyPickedUp",
@@ -254,6 +292,20 @@
        },
        {
         "Id": "910162288"
+       }
+      ]
+     },
+     {
+      "Id": "1924872261",
+      "Name": "LostEvent",
+      "ObjectPath": "\\Events\\Default Work Unit\\LostEvent",
+      "GUID": "{7897070F-CF5F-46C0-8566-B7B1D897B5A3}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.0050833",
+      "DurationMax": "2.0050833",
+      "MediaRefs": [
+       {
+        "Id": "15211267"
        }
       ]
      },
@@ -322,14 +374,16 @@
       ]
      },
      {
-      "Id": "1097980931",
-      "Name": "TestEvent",
-      "ObjectPath": "\\Events\\Default Work Unit\\TestEvent",
-      "GUID": "{2A2E3277-E1AE-48D1-8DDA-AA5F1CC64BA5}",
-      "DurationType": "Infinite",
+      "Id": "2151630775",
+      "Name": "WinEvent",
+      "ObjectPath": "\\Events\\Default Work Unit\\WinEvent",
+      "GUID": "{44EF1DDC-5D93-4BA1-9FC5-C38EF2A64336}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5568986",
+      "DurationMax": "1.5568986",
       "MediaRefs": [
        {
-        "Id": "949727889"
+        "Id": "241685188"
        }
       ]
      }
@@ -394,6 +448,6 @@
     ]
    }
   ],
-  "FileHash": "{8658AFE5-1DA1-76AB-447C-36C8CEF995F6}"
+  "FileHash": "{0A287655-565F-F1EF-19C8-1B84A5EE989F}"
  }
 }

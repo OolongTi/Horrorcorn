@@ -12918,6 +12918,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9c1141bc4c4f14ca4be61b18b3e5cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  looseSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 676a1a241c707f34d935ee4ffec0cbcc, type: 2}
+  winSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ff5f3e310fa39ca43b8bffcdf60520d1, type: 2}
 --- !u!4 &393576654 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 433038, guid: 51e1ec27a31e16a4ba99622c680fd8ec, type: 3}
@@ -14493,9 +14501,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1004308107}
     - target: {fileID: 1061108859451901143, guid: 2e73a41e0af29d1469def11b4bedeb99, type: 3}
+      propertyPath: jumpEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 61685c064f7716847929973e0f1e0cce, type: 2}
+    - target: {fileID: 1061108859451901143, guid: 2e73a41e0af29d1469def11b4bedeb99, type: 3}
       propertyPath: speedRtpc.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 0d8a9a615f163eb459df8d3d30028c12, type: 2}
+    - target: {fileID: 1061108859451901143, guid: 2e73a41e0af29d1469def11b4bedeb99, type: 3}
+      propertyPath: landingEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e67dcbe2b91e3845ba64304f981f96a, type: 2}
     - target: {fileID: 6039948140056858308, guid: 2e73a41e0af29d1469def11b4bedeb99, type: 3}
       propertyPath: m_TagString
       value: PlayerCollider
@@ -15893,6 +15909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 6860122052618107984, guid: e44c09fd6bbfffb47a875b9a64b19cec, type: 3}
+      propertyPath: lostEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 676a1a241c707f34d935ee4ffec0cbcc, type: 2}
     - target: {fileID: 8268715228553890046, guid: e44c09fd6bbfffb47a875b9a64b19cec, type: 3}
       propertyPath: m_Pivot.x
       value: 0

@@ -1,7 +1,9 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1097980931	TestEvent			\Default Work Unit\TestEvent	
 	1103958200	EnemyWalk			\Default Work Unit\EnemyWalk	
+	1924872261	LostEvent			\Default Work Unit\LostEvent	
 	1952464646	Play_BackgroundAmbience			\Default Work Unit\Play_BackgroundAmbience	
+	2018074403	JumpEvent			\Default Work Unit\JumpEvent	
+	2151630775	WinEvent			\Default Work Unit\WinEvent	
 	2539379111	PlayerWalkAndRun			\Default Work Unit\PlayerWalkAndRun	
 	3105125657	KeyPickedUp			\Default Work Unit\KeyPickedUp	
 	3818553682	ChurchBells			\Default Work Unit\ChurchBells	
@@ -25,6 +27,8 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	1493153371	PlayerSpeed			\Default Work Unit\PlayerSpeed	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	15211267	lost	.cache\63\{63015836-98B3-C1B1-7E59-1ED7CEBEBE55}.wem		\Containers\Default Work Unit\lost		385072
+	241685188	510903__lydmakeren__horse_neighing	.cache\EE\{EE935FC0-A213-D39C-DE1E-86743F1DC6BC}.wem		\Containers\Default Work Unit\510903__lydmakeren__horse_neighing		299020
 	245338401	731047__moodyfingers__keychain-grabbing	.cache\30\{308B91B6-1DF5-660C-2CB4-C38B23199AF6}.wem		\Containers\Default Work Unit\Keys\731047__moodyfingers__keychain-grabbing		123496
 	270011448	FootstepsRunning	.cache\4B\{4BCD9C3F-4987-402E-B857-3ABA8F87BEF4}.wem		\Containers\Default Work Unit\PlayerWalkBlend\FootstepsRunning		2189636
 	271047571	731047__moodyfingers__keychain-grabbing_05	.cache\20\{20D2360B-2F99-5086-344C-786CAE5A5AF8}.wem		\Containers\Default Work Unit\Keys\731047__moodyfingers__keychain-grabbing_05		62212
@@ -39,7 +43,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	708032726	731047__moodyfingers__keychain-grabbing_01	.cache\A3\{A3B7FE71-5688-BEAB-76A5-1257ACC3F32A}.wem		\Containers\Default Work Unit\Keys\731047__moodyfingers__keychain-grabbing_01		79576
 	730093018	684161__dibko__the-church-bells-ring-twice	.cache\53\{5377B56F-61DD-F2CF-8042-936A6A0B5A61}.wem		\Containers\Default Work Unit\684161__dibko__the-church-bells-ring-twice		1127288
 	743090927	842088__adiantheman__spooky-ambience	.cache\E0\{E0167945-A4E1-28A9-48FF-41EB8E5AB6F9}.wem		\Containers\Default Work Unit\BackgroundNoise\842088__adiantheman__spooky-ambience		5472352
-	784897722	157130__slave2thelight__solo-zombie-8	.cache\08\{0808C621-A76D-BC31-6E46-7191A2EC3917}.wem		\Containers\Default Work Unit\EnemyNoise\157130__slave2thelight__solo-zombie-8		23251068
+	784897722	157130__slave2thelight__solo-zombie-8	.cache\11\{11CC0449-83C7-8FCE-D7E5-F36418564E30}.wem		\Containers\Default Work Unit\EnemyNoise\157130__slave2thelight__solo-zombie-8		23251068
+	884762643	jump	.cache\A6\{A6F3083E-94C3-D7F0-B63E-CAE7B70E0C30}.wem		\Containers\Default Work Unit\jump		72412
 	910162288	731047__moodyfingers__keychain-grabbing_06	.cache\E2\{E2AA327B-3D08-8B7C-3188-EC2828B5822C}.wem		\Containers\Default Work Unit\Keys\731047__moodyfingers__keychain-grabbing_06		71208
 	949727889	FootstepsWalking	.cache\62\{62CC9348-4DDC-08F3-1505-E42A9604EAA0}.wem		\Containers\Default Work Unit\PlayerWalkBlend\FootstepsWalking		2189636
 	959806527	BackgroundSound	.cache\0F\{0FF412F8-357F-34DF-3356-41F4006E6CF4}.wem		\Containers\Default Work Unit\BackgroundNoise\BackgroundSound		27362232

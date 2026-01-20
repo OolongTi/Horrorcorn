@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E8C633F5-B241-4127-9A1D-05866775EF05}" SchemaVersion="133">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{E8C633F5-B241-4127-9A1D-05866775EF05}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E8C633F5-B241-4127-9A1D-05866775EF05}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="EnemySoundsSwitch" ID="{CD49931D-8CBC-4D08-85F4-9DD3AB4BA672}">
+					<ChildrenList>
+						<Switch Name="Idle" ID="{915A6B94-0012-488D-B90B-7E26F66B4255}"/>
+						<Switch Name="Chasing" ID="{A3D9F161-8E4E-448D-9BDC-CC10D3692C2E}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>
