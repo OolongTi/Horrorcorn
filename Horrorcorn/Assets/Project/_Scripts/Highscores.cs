@@ -31,13 +31,13 @@ public class HighScores
     private void Save()
     {
         string json = JsonConvert.SerializeObject(entries);
-        string path = Path.Combine(Application.persistentDataPath, fileName);
+        string path = Path.Combine(Application.dataPath, fileName);
         File.WriteAllText(path, json); //immer path zuerst sonst wird ins json der path gespeichert
     }
 
     private void Load()
     {
-        string path = Path.Combine(Application.persistentDataPath, fileName);
+        string path = Path.Combine(Application.dataPath, fileName);
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);
