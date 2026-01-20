@@ -99,7 +99,7 @@ public class StartMenu : MonoBehaviour
         
         HighScores highscores = new HighScores();
         Timer currentTimer = FindObjectOfType<Timer>();
-        if (currentTimer != null)
+        if (currentTimer != null && message == "You won!")
         {
             highscores.AddEntry(PlayerName, currentTimer.time);
         }
