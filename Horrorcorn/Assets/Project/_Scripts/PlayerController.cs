@@ -47,6 +47,13 @@ public class PlayerController : MonoBehaviour
     {
         if (Time.timeScale == 0) return;
         
+        // Exit Game Logic
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+        
         // Movement Input Logic
         Vector3 movementVector = Vector3.zero;
 
