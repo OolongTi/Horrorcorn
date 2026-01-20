@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -97,11 +98,11 @@ public class StartMenu : MonoBehaviour
         PlayerCamera.UnlockCursor();
         PreviousEndMessage = message;
         
-        HighScores highscores = new HighScores();
+        HighScores hs = new HighScores();
         Timer currentTimer = FindObjectOfType<Timer>();
-        if (currentTimer != null && message == "You won!")
+        if (currentTimer != null && message == "You Won!")
         {
-            highscores.AddEntry(PlayerName, currentTimer.time);
+            hs.AddEntry(PlayerName, currentTimer.time);
         }
         
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

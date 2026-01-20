@@ -50,7 +50,7 @@ public class HighScores
     {
         while (entries.Count < 5)
         {
-            entries.Add(new Entry { PlayerName = "Dude", time = 50.0f });
+            entries.Add(new Entry { PlayerName = "Dude", time = 250.0f });
         }
     }
     
